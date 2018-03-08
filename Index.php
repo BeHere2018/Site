@@ -1,9 +1,10 @@
 <?php
-
 if(!isset($_COOKIE['id'])){
-$cookie_value=file_get_contents('https://www.random.org/cgi-bin/randbyte?nbytes=50&format=h');
+$cookie_value="DBT".rand(0,100000000000000000000000)."AZT";
 $cookie_name='id';
 setcookie($cookie_name, $cookie_value, time() + (86400 * 1500), "/");
+include 'put_personne.php';
+put_personne($cookie_value);
 }
 
 
@@ -29,14 +30,9 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 1500), "/");
                 <h2> Une erreur est survenue:</h2>
                 <h2><?php echo $erreur?></h2>
             <?php } ?>
-            <div class="bouton">
-            <form action='Anonyme.php' method="post">
-            <input type="submit" value="Mode Anonyme">
-            </form>
-            <form action='Preconnexion.php' method="post">
-            <input id="mail" name="mail" placeholder="Votre adresse mail" />
+            <form action='Connexion.php' method="post">
             <br>
-            <input type="submit" value="Connexion" >
+            <input type="submit" value="C'est partie !" >
             </form>
             </div>
 		</div>

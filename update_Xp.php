@@ -7,6 +7,9 @@ function get_xp($mail){
     $result = pg_query($query);
     return pg_fetch_row($result);
 }
+
+
+
 function update_Xp($mail){
     $xp=get_xp($mail)[0];
     $xp=$xp+20;

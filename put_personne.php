@@ -11,12 +11,10 @@ $req->execute(array(
 }
 */
 //put_personne();
-function put_personne($mail,$Pseudo=""){
-    
-$mail=htmlspecialchars($mail);
+function put_personne($mail){
+
 include'connexion_postgre.php';
-	
-$query = "INSERT INTO personne(mail,pseudo,xp) VALUES('".$mail."', '".$Pseudo."',0)";
+$query = "INSERT INTO personne(mail,xp) VALUES('".$mail."',0)";
 //$query = "INSERT INTO personne(mail,pseudo) VALUES(mail, pseudo)";
 $result = pg_query($query);
 
