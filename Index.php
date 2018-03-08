@@ -32,7 +32,7 @@ put_personne($cookie_value);
             <?php } ?>
             <form action='Connexion.php' method="post">
             <br>
-            <input type="submit" value="C'est partie !" >
+            <input type="submit" value="C'est parti !" >
             </form>
             </div>
 		</div>
