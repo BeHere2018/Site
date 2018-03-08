@@ -34,11 +34,11 @@ function get_biere($mail)
 
     include'connexion_postgre.php';
 	
-    $query = "SELECT MAX(id) as max FROM biere";
-    $max = pg_query($query);
-    $Index=rand(1,pg_fetch_result($max,0,0));
+   // $query = "SELECT MAX(id) as max FROM biere";
+   // $max = pg_query($query);
+   // $Index=rand(1,pg_fetch_result($max,0,0));
     
-
+    /*
 	if($mail=='Anonymous')
 	{
     $query = "SELECT * FROM biere WHERE Id= '".$Index."'";
@@ -49,6 +49,21 @@ function get_biere($mail)
 	else
 	{
     $query = "SELECT * FROM biere WHERE Id= '".$Index."'";
+    $result = pg_query($query);
+    return pg_fetch_row($result);
+    }
+    */
+
+    if($mail=='Anonymous')
+	{
+    $query = "SELECT * FROM biere";
+    $result = pg_query($query);
+    return pg_fetch_row($result);
+    
+	}
+	else
+	{
+    $query = "SELECT * FROM biere";
     $result = pg_query($query);
     return pg_fetch_row($result);
 	}
