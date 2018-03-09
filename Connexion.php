@@ -153,7 +153,7 @@ if(!isset($_COOKIE['id'])){
 		}
 	</script>
 
-	<footer class="container-fluid bg-4 text-center">
+	<footer class="bg-4 text-center">
   		<p>Visual Effects Made By <a href="https://www.nicolas-meneux.fr">www.nicolas-meneux.fr</a></p> 
 	</footer>
 	</body>
