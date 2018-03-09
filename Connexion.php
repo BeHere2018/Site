@@ -44,23 +44,31 @@ if(!isset($_COOKIE['id'])){
 				?>
 				<h3>Vous êtes actuellement niveau <?php echo $lvl; ?>, et à <?php echo $xp[0]-100*$lvl; ?> % du niveau actuel :)
 				</h3>
+				<h4>Pour sélectionner une bière, cliquez sur son image</h4>	
 			</div>
 			
 			<div class="row">
+			<div class="col-sm-3"
 			<?php 
 				$biere=get_biere('Anonymous');?>
-				<h4>Vous notez  la : <?php echo $biere[1];?><img src=<?php echo $biere[4];?> onclick = "onClickHide(1)"></img></h4>
+				<h4><img style="width 350px; height:350px;" class="img-rounded" src=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/1664_beer_white_and_blue_bottles.jpg/1200px-1664_beer_white_and_blue_bottles.jpg onclick = "onClickHide(1)"></img></h4>
+				<form action='Traitement.php' method="post">
+					<input id="mail" name="mail" type="hidden" value="Anonymous">
+					<input  class="btn btn-danger"  type="submit" value="Je ne connais pas cette bière" />
+				</form>
 			</div>	
-			<div class = "row" id="notation<?php echo $biere[0]; ?>" style="display:none">
+			<div class = "col-sm-8" id="notation<?php echo $biere[0]; ?>" style="display:none">
 			<form action='Traitement.php' method="post">
 				<div onclick = "onClickHide2(1)">
 					<h2>Partie Obligatoire : </h2>
-					<div class = "radio">
-						<a> Note</a>
+					<div class = "radio col-sm-9">
+						<a> Votre appréciation générale de la bière : </a>
+						<br>
 						<input type="radio" name="Note" value="0" > Imbuvable
 						<input type="radio" name="Note" value="1" > Limite
 						<input type="radio" name="Note" value="2" > Passable / Buvable
 						<input type="radio" name="Note" value="3" > Assez bonne
+						<br>
 						<input type="radio" name="Note" value="4" > Bonne
 						<input type="radio" name="Note" value="5" > Très bonne
 						<input type="radio" name="Note" value="6" > Excellente
@@ -69,7 +77,7 @@ if(!isset($_COOKIE['id'])){
 				</div>
 				<div id="facultatif<?php echo $biere[0]; ?>" style="display:none">
 					<h2>Partie Facultative :</h2>
-					<div class = "radio">
+					<div class = "radio col-sm-9">
 						<a>Arôme</a>
 							<input type="radio" name="Arome" value="-1" checked> Non Noté
 							<input type="radio" name="Arome" value="0" > 0
@@ -109,11 +117,17 @@ if(!isset($_COOKIE['id'])){
 							<input id="mail" name="mail" type="hidden" value=<?php echo $_COOKIE['id']?>>
 							<input id="idbiere" name="idbiere" type="hidden" value='<?php echo $biere[0]; ?>'>
 							<br>
+							<div class ="col-sm-12" id="valider la note" >
+								<button type="button" class="btn btn-info" onclick = "onClickHide(1)">Valider ma réponse</button>
+							</div>	
 					</div>
 				</div>
+				
+			</div>
+
 			</div>
 			<div class="row">
-					<input  class="btn btn-primary"  type="submit" value="voter" />		
+					<input  class="btn btn-primary"  type="submit" value="Envoyer mes avis !" />		
 				</form>
 			</div>
 			</form>
@@ -122,12 +136,6 @@ if(!isset($_COOKIE['id'])){
 				var idDiv = idBiere;
 				$('.notationC').append('<div id='+idDiv+'></div><br/>');
 			</script>
-			<div class="row">
-				<form action='Traitement.php' method="post">
-					<input id="mail" name="mail" type="hidden" value="Anonymous">
-					<input  class="btn btn-danger"  type="submit" value="Je ne connais pas cette bière" />
-				</form>
-			</div>
 		</div>
 
 	<script>
@@ -136,7 +144,6 @@ if(!isset($_COOKIE['id'])){
 		function onClickHide(num_biere) {
 			var id = num_biere
 			var x = document.getElementById("notation"+num_biere);
-			//document.write(idBiere)
 			if (x.style.display === "block") {
 				x.style.display = "none";
 			} else {
@@ -145,15 +152,15 @@ if(!isset($_COOKIE['id'])){
 		}
 		function onClickHide2(num_biere) {
 			var x = document.getElementById("facultatif"+num_biere);
-			if (x.style.display === "block") {
-				x.style.display = "none";
+			if (x.style.display === "none") {
+				x.style.display = "block";
 			} else {
 				x.style.display = "block";
 			}
 		}
 	</script>
 
-	<footer class="bg-4 text-center">
+	<footer class="container-fluid bg-4 text-center">
   		<p>Visual Effects Made By <a href="https://www.nicolas-meneux.fr">www.nicolas-meneux.fr</a></p> 
 	</footer>
 	</body>

@@ -34,17 +34,17 @@ put_personne($cookie_value);
         </nav>
 		<div class="container-fluid">
 			<div class="row" id="intro">
-				<h3>Bonjour à tous est bienvenue sur notre site de collecte de données concernant les bières
-                <br>Il y a deux modes disponibles : 
-                <br>le mode anonyme pour répondre au plus vite et sans être interessé par les bonus 
-                <br>le mode connexion pour gagner des bonus sur notre futur application</h3>
+                <h3>Bonjour à tous et bienvenue sur notre site de collecte de données concernant les bières ! </h3>
+                <h4>Nous vous remercions pour votre avis, qui est anonyme.
+                </br> Il est pour l'instant stocké sur votre navigateur, ainsi un changement de navigateur, de pc ou un passage sur smartphone vous fera perdre votre expérience. Mais ne vous inquiétez pas ! Une prochaine version vous permettra de conserver vos données.
+                </h4>
 			</div>
             <?php if(isset($erreur)){ ?>
                 <h2> Une erreur est survenue:</h2>
                 <h2><?php echo $erreur?></h2>
             <?php } ?>
-            <div class="row">
-                <div class ="col-sm-12"
+            <div class="row" style="text-align:center">
+                <div class ="col-sm-12">
                 <form action='Connexion.php' method="post">
                 <br>
                 <input type="submit" class="btn btn-primary" value="C'est parti !" >
