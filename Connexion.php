@@ -48,8 +48,10 @@ if(!isset($_COOKIE['id'])){
 			
 			<div class="row">
 			<?php 
-				$biere=get_biere('Anonymous');?>
-				<h4>Vous notez  la : <?php echo $biere[1];?><img src=<?php echo $biere[4];?> onclick = "onClickHide(1)"></img></h4>
+				$bieres=get_x_biere(10);
+				foreach($bieres as $biere){
+				?>
+				<h4>Vous notez  la : <?php echo $biere[1];?><img src=<?php echo $biere[2];?> onclick = "onClickHide(1)"></img></h4>
 			</div>	
 			<div class = "row" id="notation<?php echo $biere[0]; ?>" style="display:none">
 			<form action='Traitement.php' method="post">
@@ -117,6 +119,7 @@ if(!isset($_COOKIE['id'])){
 				</form>
 			</div>
 			</form>
+				<?php }?>
 			<script>
 				var idBiere = '<?php echo $biere[0] ?>';
 				var idDiv = idBiere;
