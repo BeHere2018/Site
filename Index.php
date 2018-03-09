@@ -1,10 +1,11 @@
 <?php
 if(!isset($_COOKIE['id'])){
-$cookie_value="DBT".rand(0,100000000000000000000000)."AZT";
+$cookie_value="DBT".rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9)."AZT";
 $cookie_name='id';
 setcookie($cookie_name, $cookie_value, time() + (86400 * 1500), "/");
 include 'put_personne.php';
 put_personne($cookie_value);
+//$adresse_ip = $_SERVER['REMOTE_ADDR'];
 }
 
 

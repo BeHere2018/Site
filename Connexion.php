@@ -1,11 +1,12 @@
 <?php 
 if(!isset($_COOKIE['id'])){
-	$cookie_value=file_get_contents('https://www.random.org/cgi-bin/randbyte?nbytes=15&format=h');
+	$cookie_value="DBT".rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9)."AZT";
 	$cookie_name='id';
 	setcookie($cookie_name, $cookie_value, time() + (86400 * 1500), "/");
 	include 'put_personne.php';
 	put_personne($cookie_value);
-}
+	//$adresse_ip = $_SERVER['REMOTE_ADDR'];
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -48,9 +49,10 @@ if(!isset($_COOKIE['id'])){
 			<div class="row">
 			<?php 
 				$biere=get_biere('Anonymous');?>
-				<h4>Vous notez  la : <img src="http://www.lsa-conso.fr/mediatheque/3/1/0/000025013.jpg" onclick = "onClickHide(1)"></img></h4>
+				<h4>Vous notez  la : <?php echo $biere[1];?><img src=<?php echo $biere[4];?> onclick = "onClickHide(1)"></img></h4>
 			</div>	
 			<div class = "row" id="notation<?php echo $biere[0]; ?>" style="display:none">
+			<form action='Traitement.php' method="post">
 				<div onclick = "onClickHide2(1)">
 					<h2>Partie Obligatoire : </h2>
 					<div class = "radio">
@@ -104,17 +106,17 @@ if(!isset($_COOKIE['id'])){
 							<input type="radio" name="Apparence" value="4" > 4
 							<input type="radio" name="Apparence" value="5" > 5
 							<br>
-							<input id="mail" name="mail" type="hidden" value="Anonymous">
-							<input id="idbiere" name="idbiere" type="hidden" value="<?php echo $biere[0]?>">
+							<input id="mail" name="mail" type="hidden" value=<?php echo $_COOKIE['id']?>>
+							<input id="idbiere" name="idbiere" type="hidden" value='<?php echo $biere[0]; ?>'>
 							<br>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<form action='Traitement.php' method="post">
 					<input  class="btn btn-primary"  type="submit" value="voter" />		
 				</form>
 			</div>
+			</form>
 			<script>
 				var idBiere = '<?php echo $biere[0] ?>';
 				var idDiv = idBiere;
