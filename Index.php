@@ -43,7 +43,11 @@ put_personne($cookie_value);
                 <h2> Une erreur est survenue:</h2>
                 <h2><?php echo $erreur?></h2>
             <?php } ?>
+<<<<<<< HEAD
             <div class="row" style="text-align:center">
+=======
+            <div class="row">
+>>>>>>> d648cb8ee44fd24a2910c3dcecd46d5f914773ee
                 <div class ="col-sm-12">
                 <form action='Connexion.php' method="post">
                 <br>
