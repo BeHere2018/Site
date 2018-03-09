@@ -51,11 +51,5 @@ function get_x_biere($nb){
     }
     return $elem;
 }
-$test=get_x_biere(3);
-foreach( $test as $i){
-    foreach($i as $t){
-        echo $t;
-    }
-}
 
 ?>

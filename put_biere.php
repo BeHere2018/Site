@@ -10,7 +10,6 @@ $lines = file('images_forDB.csv');
 foreach ($lines as $line)
 {
     $elem=explode(';',$line);
-    //put_biere($elem[0],str_replace(".",",",$elem[1]),$elem[2]);
     put_biere($elem[0],$elem[1],$elem[2]);
 }
 

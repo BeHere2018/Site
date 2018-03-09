@@ -50,15 +50,15 @@ if(!isset($_COOKIE['id'])){
 			<?php 
 				$bieres=get_x_biere(10);
 				foreach($bieres as $biere){
+
 				?>
-				<h4>Vous notez  la : <?php echo $biere[1];?><img src=<?php echo $biere[2];?> onclick = "onClickHide(1)"></img></h4>
+				<h4> <?php echo $biere[1];?><img src=<?php echo $biere[2];?> onclick = "onClickHide(<?php echo $biere[0];?>)"></img></h4>
 			</div>	
 			<div class = "row" id="notation<?php echo $biere[0]; ?>" style="display:none">
 			<form action='Traitement.php' method="post">
-				<div onclick = "onClickHide2(1)">
-					<h2>Partie Obligatoire : </h2>
+				<div onclick = "onClickHide2(<?php echo $biere[0];?>)">
+					<h2>Notation : </h2>
 					<div class = "radio">
-						<a> Note</a>
 						<input type="radio" name="Note" value="0" > Imbuvable
 						<input type="radio" name="Note" value="1" > Limite
 						<input type="radio" name="Note" value="2" > Passable / Buvable
@@ -70,7 +70,7 @@ if(!isset($_COOKIE['id'])){
 					</div>
 				</div>
 				<div id="facultatif<?php echo $biere[0]; ?>" style="display:none">
-					<h2>Partie Facultative :</h2>
+					<h2>Notation Précise :</h2>
 					<div class = "radio">
 						<a>Arôme</a>
 							<input type="radio" name="Arome" value="-1" checked> Non Noté
@@ -119,7 +119,9 @@ if(!isset($_COOKIE['id'])){
 				</form>
 			</div>
 			</form>
-				<?php }?>
+				<?php
+			}
+			 ?>
 			<script>
 				var idBiere = '<?php echo $biere[0] ?>';
 				var idDiv = idBiere;
