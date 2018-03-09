@@ -48,13 +48,14 @@ if(!isset($_COOKIE['id'])){
 			</div>
 			
 			<div class="row">
-			<div class="col-sm-3"
+			<div class="col-sm-3">
 			<?php 
 				$bieres=get_x_biere(10);
 				foreach($bieres as $biere){
-
-				?>
-				<h4> <?php echo $biere[1];?><img src=<?php echo $biere[2];?> onclick = "onClickHide(<?php echo $biere[0];?>)"></img></h4>
+			?>
+				<img src=<?php echo $biere[2];?> onclick = "onClickHide(<?php echo $biere[0];?>)"></img>
+				<h2> <?php echo $biere[1] ?> </h2>
+				
 			</div>	
 			<div class = "col-sm-8" id="notation<?php echo $biere[0]; ?>" style="display:none">
 			<form action='Traitement.php' method="post">
@@ -113,20 +114,18 @@ if(!isset($_COOKIE['id'])){
 							<input type="radio" name="Apparence" value="4" > 4
 							<input type="radio" name="Apparence" value="5" > 5
 							<br>
-							<input id="mail" name="mail" type="hidden" value=<?php echo $_COOKIE['id']?>>
+							<input id="mail" name="mail" type="hidden" value='<?php echo $_COOKIE['id'];?>'>
 							<input id="idbiere" name="idbiere" type="hidden" value='<?php echo $biere[0]; ?>'>
 							<br>
-							<div class ="col-sm-12" id="valider la note" >
-								<button type="button" class="btn btn-info" onclick = "onClickHide(1)">Valider ma réponse</button>
+							<div class ="col-sm-12" id="valider la note" >	
+								<button type="button" class="btn btn-info" onclick = "onClickHide(<?php echo $biere[0];?>)">Réduire</button>
 							</div>	
 					</div>
 				</div>
-				
 			</div>
-
 			</div>
 			<div class="row">
-					<input  class="btn btn-primary"  type="submit" value="Envoyer mes avis !" />		
+					<input  class="btn btn-primary"  type="submit" value="Envoyer mon avis !" />		
 				</form>
 			</div>
 			</form>
