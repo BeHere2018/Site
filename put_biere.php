@@ -6,6 +6,7 @@ $query = "INSERT INTO biere(nom,degree,url) VALUES('".$nom."', '".$degree."', '"
 $result = pg_query($query);
 
 }
+
 $lines = file('images_forDB.csv');
 foreach ($lines as $line)
 {
