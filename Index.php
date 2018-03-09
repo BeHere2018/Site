@@ -44,7 +44,7 @@ put_personne($cookie_value);
                 <h2><?php echo $erreur?></h2>
             <?php } ?>
             <div class="row">
-                <div class ="col-sm-12"
+                <div class ="col-sm-12">
                 <form action='Connexion.php' method="post">
                 <br>
                 <input type="submit" class="btn btn-primary" value="C'est parti !" >
