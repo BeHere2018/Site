@@ -7,7 +7,7 @@ $result = pg_query($query);
 
 }
 
-$lines = file('images_forDB.csv');
+$lines = file('images_forDB.txt');
 foreach ($lines as $line)
 {
     $elem=explode(';',$line);
