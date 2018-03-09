@@ -48,7 +48,7 @@ if(!isset($_COOKIE['id'])){
 			<div class="row">
 			<?php 
 				$biere=get_biere('Anonymous');?>
-				<h4>Vous notez  la : <img src="http://www.lsa-conso.fr/mediatheque/3/1/0/000025013.jpg" onclick = "onClickHide(1)"></img></h4>
+				<h4>Vous notez  la <?php echo $biere[1]; ?> :  <img src="http://www.lsa-conso.fr/mediatheque/3/1/0/000025013.jpg" onclick = "onClickHide(1)"></img></h4>
 			</div>	
 			<div class = "row" id="notation<?php echo $biere[0]; ?>" style="display:none">
 				<div onclick = "onClickHide2(1)">
@@ -151,7 +151,7 @@ if(!isset($_COOKIE['id'])){
 		}
 	</script>
 
-	<footer class="container-fluid bg-4 text-center">
+	<footer class="bg-4 text-center">
   		<p>Visual Effects Made By <a href="https://www.nicolas-meneux.fr">www.nicolas-meneux.fr</a></p> 
 	</footer>
 	</body>
