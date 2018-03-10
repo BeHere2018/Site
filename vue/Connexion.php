@@ -3,7 +3,7 @@ if(!isset($_COOKIE['id'])){
 	$cookie_value="DBT".rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9)."AZT";
 	$cookie_name='id';
 	setcookie($cookie_name, $cookie_value, time() + (86400 * 1500), "/");
-	include 'put_personne.php';
+	include '../modele/put_personne.php';
 	put_personne($cookie_value);
 	//$adresse_ip = $_SERVER['REMOTE_ADDR'];
 	}
@@ -17,7 +17,7 @@ if(!isset($_COOKIE['id'])){
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<link  rel="stylesheet" type="text/css" media="screen"  href="./style/notation.css?<?php echo rand(0,10)?>" />
+		<link  rel="stylesheet" type="text/css" media="screen"  href="../style/notation.css?<?php echo rand(0,10)?>" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
@@ -29,7 +29,7 @@ if(!isset($_COOKIE['id'])){
   </div>
 </nav>
 
-	<?php include'Get_biere.php';?>
+	<?php include'../modele/Get_biere.php';?>
 		<div class="container fluid">
 			<div class ="row">
 				<h1>Bienvenue sur notre humble page de notation de céréales liquides !</h1>
@@ -37,7 +37,7 @@ if(!isset($_COOKIE['id'])){
 			<div class="row">
 				<?php 
 					if(!function_exists("get_xp")){
-					include'update_Xp.php';
+					include '../modele/update_Xp.php';
 					}
 					$xp=get_xp($_COOKIE['id']);
 					$lvl=floor($xp[0]/100);
@@ -49,7 +49,7 @@ if(!isset($_COOKIE['id'])){
 			<div class="row">
 				<div class="col-sm-3">
 					<?php 
-						$bieres=get_x_biere(9);
+						$bieres=get_x_biere($_COOKIE['id'],9);
 						$i=0;
 						foreach($bieres as $biere){
 							if($i%3==0){

@@ -3,7 +3,7 @@ if(!isset($_COOKIE['id'])){
 $cookie_value="DBT".rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9)."AZT";
 $cookie_name='id';
 setcookie($cookie_name, $cookie_value, time() + (86400 * 1500), "/");
-include 'put_personne.php';
+include '../modele/put_personne.php';
 put_personne($cookie_value);
 //$adresse_ip = $_SERVER['REMOTE_ADDR'];
 }
@@ -21,7 +21,7 @@ put_personne($cookie_value);
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<link  rel="stylesheet" type="text/css" media="screen"  href="./style/notation.css" />
+		<link  rel="stylesheet" type="text/css" media="screen"  href="../style/notation.css" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
