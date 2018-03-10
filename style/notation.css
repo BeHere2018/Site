@@ -1,3 +1,6 @@
+html{
+    width: 100%;
+}
 h1{
     padding-top: 20px;
     text-align: center;
@@ -5,6 +8,9 @@ h1{
 
 .row{
     padding-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+
 }
 
 footer { 
@@ -34,4 +40,31 @@ footer {
       padding-top: 40px;
       padding-bottom: 40px;
   }
+img{
+    height: 200px;
+    width: auto;
+}
+.col-sm-3{
+    
+    width: 100%;
+    flex: 100%;
+    max-width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
 
+}
+.biere{
+
+    width:32%;
+    margin:5px;
+    border:0;
+    float: left;
+
+}
+b{
+    font-size: 15px;
+}
+.col-sm-8{
+    width: 100%;
+    max-width: 100%;
+}

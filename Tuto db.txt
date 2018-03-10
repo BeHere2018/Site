@@ -1,0 +1,5 @@
+ouvrir cmd 
+aller dans le répertoire postegresql  => ex : c:\program Files\PostgreSQL\10\bin
+taper : pg_dump -U user -W -F t nom_db > chemin 
+t pour tar 
+chemin  ex: c:\biere.tar
