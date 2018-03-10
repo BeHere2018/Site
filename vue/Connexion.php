@@ -5,7 +5,6 @@ if(!isset($_COOKIE['id'])){
 	setcookie($cookie_name, $cookie_value, time() + (86400 * 1500), "/");
 	include '../modele/put_personne.php';
 	put_personne($cookie_value);
-	//$adresse_ip = $_SERVER['REMOTE_ADDR'];
 	}
 ?>
 <!DOCTYPE html>
@@ -62,7 +61,7 @@ if(!isset($_COOKIE['id'])){
 					<b> <?php echo $biere[1] ?> </b>
 					</div>
 				<div class = "col-sm-8" id="notation<?php echo $biere[0]; ?>" style="display:none">
-					<form action='Traitement.php' method="post">
+					<form action='../constructeur/Traitement.php' method="post">
 						<div class = "notation" onclick = "onClickHide2(<?php echo $biere[0];?>)">
 							<h2>Notation : </h2>
 							<div class = "radio col-sm-9">

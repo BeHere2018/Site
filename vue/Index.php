@@ -1,17 +1,3 @@
-<?php
-if(!isset($_COOKIE['id'])){
-$cookie_value="DBT".rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9)."AZT";
-$cookie_name='id';
-setcookie($cookie_name, $cookie_value, time() + (86400 * 1500), "/");
-include '../modele/put_personne.php';
-put_personne($cookie_value);
-//$adresse_ip = $_SERVER['REMOTE_ADDR'];
-}
-
-
-?>
-
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -35,7 +21,7 @@ put_personne($cookie_value);
 		<div class="container-fluid">
 			<div class="row" id="intro">
                 <h3>Bonjour à tous et bienvenue sur notre site de collecte de données concernant les bières ! </h3>
-                <h4>Nous vous remercions pour votre avis, qui est anonyme.
+                <h4>Nous vous remercions pour votre avis.
                 </br> Il est pour l'instant stocké sur votre navigateur, ainsi un changement de navigateur, de pc ou un passage sur smartphone vous fera perdre votre expérience. Mais ne vous inquiétez pas ! Une prochaine version vous permettra de conserver vos données.
                 </h4>
 			</div>
@@ -45,10 +31,19 @@ put_personne($cookie_value);
             <?php } ?>
             <div class="row">
                 <div class ="col-sm-12">
-                <form action='Connexion.php' method="post">
+                <form action='../constructeur/connexion.php' method="post">
                 <br>
+                <h3> Votre mail:</h3>
+                 <input type=  "text" name="mail"></br>
+                <h3> Votre mot de passe :</h3>
+                 <input type="password" name ="mdp"></br>
                 <input type="submit" class="btn btn-primary" value="C'est parti !" >
                 </form>
+                <br>
+                <form action='../constructeur/inscription.php' method="post">
+                <input type="submit" class="btn btn-primary" value="S'incrire!" >
+                </form>
+                </br>
             </div>
             </div>
         </div>
