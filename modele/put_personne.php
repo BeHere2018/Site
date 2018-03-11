@@ -4,9 +4,7 @@ include  $bdd;
 
 function put_personne($mail,$mdp){
 
-    $mail = mysql_real_escape_string($mail);
     $mail=htmlspecialchars($mail);
-    $mdp = mysql_real_escape_string($mdp);
     $mdp=htmlspecialchars($mdp);
 
 /*

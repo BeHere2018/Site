@@ -5,7 +5,7 @@ include  $bdd;
 function get_xp($id){
 
     $id=intval($id);
-    $id=htmlspecialchars($id;
+    $id=htmlspecialchars($id);
     
     $query = "SELECT xp FROM personne WHERE id= '".$id."'";
     $result = pg_query($query);
@@ -13,7 +13,6 @@ function get_xp($id){
 }
 function get_xp_fromToken($token){
 
-    $token = mysql_real_escape_string($token);
     $token=htmlspecialchars($token);
     
     $query = "SELECT xp FROM personne WHERE token= '".$token."'";
