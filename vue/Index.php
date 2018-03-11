@@ -31,7 +31,7 @@
             <?php } ?>
             <div class="row">
                 <div class ="col-sm-12">
-                <form action='../constructeur/connexion.php' method="post">
+                <form action='../controleur/connexion.php' method="post">
                 <br>
                 <h3> Votre mail:</h3>
                  <input type=  "text" name="mail"></br>
@@ -40,7 +40,7 @@
                 <input type="submit" class="btn btn-primary" value="C'est parti !" >
                 </form>
                 <br>
-                <form action='../constructeur/inscription.php' method="post">
+                <form action='../controleur/inscription.php' method="post">
                 <input type="submit" class="btn btn-primary" value="S'incrire!" >
                 </form>
                 </br>

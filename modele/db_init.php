@@ -1,6 +1,6 @@
 <?php
 
-$bdd = pg_connect("host=localhost dbname=test user=postgres port=5432 password=MDP")
+$bdd = pg_connect("host=localhost dbname=biere user=postgres port=5432 password=01081995")
 or die("Can't connect to database".pg_last_error());
 
 $query = "CREATE TABLE biere (
@@ -12,11 +12,11 @@ $query = "CREATE TABLE biere (
 )";
 $result = pg_query($query);
 $query = "CREATE TABLE personne (
-    id bigint,
+    id bigserial PRIMARY KEY NOT NULL,
     mail text PRIMARY KEY,
-    pseudo text,
     xp bigint,
-    mdp text
+    mdp text,
+    token text
 
 )";
 $result = pg_query($query);
@@ -31,7 +31,7 @@ $query = "CREATE TABLE personne_biere (
     )";
     $result = pg_query($query);
     
-$lines = file('images_forDB.txt');
+$lines = file('../images_forDB.txt');
 foreach ($lines as $line)
 {
     $elem=explode(';',$line);

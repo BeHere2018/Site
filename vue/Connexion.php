@@ -1,12 +1,3 @@
-<?php 
-if(!isset($_COOKIE['id'])){
-	$cookie_value="DBT".rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9).rand(0,9)."AZT";
-	$cookie_name='id';
-	setcookie($cookie_name, $cookie_value, time() + (86400 * 1500), "/");
-	include '../modele/put_personne.php';
-	put_personne($cookie_value);
-	}
-?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -38,8 +29,13 @@ if(!isset($_COOKIE['id'])){
 					if(!function_exists("get_xp")){
 					include '../modele/update_Xp.php';
 					}
-					$xp=get_xp($_COOKIE['id']);
+					if(isset($_COOKIE['id'])){
+					$xp=get_xp_fromToken($_COOKIE['id']);
 					$lvl=floor($xp[0]/100);
+					}else{
+					$xp=0;
+					$lvl=0;
+					}
 				?>
 				<h3>Vous êtes actuellement niveau <?php echo $lvl; ?>, et à <?php echo $xp[0]-100*$lvl; ?> % du niveau actuel</h3>
 				<h4>Pour sélectionner une bière, cliquez sur son image</h4>	
@@ -48,7 +44,7 @@ if(!isset($_COOKIE['id'])){
 			<div class="row">
 				<div class="col-sm-3">
 					<?php 
-						$bieres=get_x_biere($_COOKIE['id'],9);
+						$bieres=get_x_biere(9);
 						$i=0;
 						foreach($bieres as $biere){
 							if($i%3==0){
@@ -61,7 +57,7 @@ if(!isset($_COOKIE['id'])){
 					<b> <?php echo $biere[1] ?> </b>
 					</div>
 				<div class = "col-sm-8" id="notation<?php echo $biere[0]; ?>" style="display:none">
-					<form action='../constructeur/Traitement.php' method="post">
+					<form action='../controleur/Traitement.php' method="post">
 						<div class = "notation" onclick = "onClickHide2(<?php echo $biere[0];?>)">
 							<h2>Notation : </h2>
 							<div class = "radio col-sm-9">
@@ -82,6 +78,7 @@ if(!isset($_COOKIE['id'])){
 							<div class = "radio col-sm-9">
 								<a>Arôme</a>
 								<input type="radio" name="Arome" value="-1" checked> Non Noté
+								<br>
 								<input type="radio" name="Arome" value="0" > 0
 								<input type="radio" name="Arome" value="1" > 1
 								<input type="radio" name="Arome" value="2" > 2
@@ -91,6 +88,7 @@ if(!isset($_COOKIE['id'])){
 								<br>
 								<a>Goût</a>
 								<input type="radio" name="Gout" value="-1" checked> Non Noté
+								<br>
 								<input type="radio" name="Gout" value="0" > 0
 								<input type="radio" name="Gout" value="1" > 1
 								<input type="radio" name="Gout" value="2" > 2
@@ -100,6 +98,7 @@ if(!isset($_COOKIE['id'])){
 								<br>
 								<a>Apparence</a>
 								<input type="radio" name="Apparence" value="-1" checked> Non Noté
+								<br>
 								<input type="radio" name="Apparence" value="0" > 0
 								<input type="radio" name="Apparence" value="1" > 1
 								<input type="radio" name="Apparence" value="2" > 2
@@ -107,11 +106,10 @@ if(!isset($_COOKIE['id'])){
 								<input type="radio" name="Apparence" value="4" > 4
 								<input type="radio" name="Apparence" value="5" > 5
 								<br>
-								<input id="mail" name="mail" type="hidden" value='<?php echo $_COOKIE['id'];?>'>
 								<input id="idbiere" name="idbiere" type="hidden" value='<?php echo $biere[0]; ?>'>
 								<br>
 								<div class ="col-sm-12" id="valider la note" >	
-									<button type="button" class="btn btn-info" onclick = "onClickHide(<?php echo $biere[0];?>)">Envoyer mon avis</button>
+									<button type="submit" class="btn btn-info" onclick = "onClickHide(<?php echo $biere[0];?>)">Envoyer mon avis</button>
 								</div>	
 							</div>
 						</div>

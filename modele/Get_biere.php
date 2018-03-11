@@ -9,13 +9,16 @@ function get_biere($mail)
     return pg_fetch_row($result);
 }
 
-function get_x_biere($id,$nb){
+function get_x_biere($nb){
     include'connexion_postgre.php';
-    $query = "SELECT * FROM biere ORDER BY id";
-    $result = pg_query($query);
+    $req="SELECT MAX(id) FROM biere";
+    $max=pg_fetch_row(pg_query($req))[0];
     $elem=array();
     for($i = 1; $i <= $nb; $i++){
         $temp=array();
+        $randID=rand(1,$max);
+        $query = "SELECT * FROM biere WHERE id = '".$randID."'";
+        $result = pg_query($query);
         $tampon = pg_fetch_row($result);
         $temp=array($tampon[0],$tampon[1],$tampon[2]);
         array_push($elem,$temp);
