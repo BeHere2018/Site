@@ -4,7 +4,7 @@ $url="https://www.google.com/recaptcha/api/siteverify";
 $secret="6Lcd-ksUAAAAABtZgHcerOvuqe2waHg8LtJIMon_";
 $response=$_POST["g-recaptcha-response"];
 
-$data = array('secret' => $secret, 'response' => $response);
+$data = array('secret' => $secret, 'response' => $response); 
 
 // use key 'http' even if you send the request to https://...
 $options = array(
@@ -16,7 +16,9 @@ $options = array(
 );
 $context  = stream_context_create($options);
 $result = file_get_contents($url, false, $context);
-if ($result === FALSE) { /* Handle error */ }
 
-var_dump($result);
+$json=json_decode($result);
+//echo $json->{'success'} ? 'true' : 'false';
+
+
 ?>

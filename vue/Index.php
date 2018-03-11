@@ -42,8 +42,9 @@
                  <!--
                     Captcha a faire une fois en prod
                     https://www.google.com/recaptcha/admin#site/340523549?setup
-                    -->
+                    
                  <div class="g-recaptcha" data-sitekey="6Lcd-ksUAAAAANZdvBS5yz8MwWvRQi78Zm6AzrPS"></div>
+                 -->
                 <input type="submit" class="btn btn-primary" value="C'est parti !" >
                 </form>
                 <br>

@@ -3,7 +3,6 @@ include  "../config.php";
 include  $bdd;
 function get_biere($mail)
 {
-    $mail = mysql_real_escape_string($mail);
     $mail=htmlspecialchars($mail);
 
     $query = "SELECT * FROM biere";
