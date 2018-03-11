@@ -8,6 +8,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
 		<link  rel="stylesheet" type="text/css" media="screen"  href=<?php echo $style."notation.css"?> />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
@@ -35,9 +36,14 @@
                 <form action=<?php echo $controleur.'connexion.php'?> method="post">
                 <br>
                 <h3> Votre mail:</h3>
-                 <input type=  "text" name="mail"></br>
+                 <input type=  "text" name="mail" maxlength="40"></br>
                 <h3> Votre mot de passe :</h3>
-                 <input type="password" name ="mdp"></br>
+                 <input type="password" name ="mdp" maxlength="20"></br>
+                 <!--
+                    Captcha a faire une fois en prod
+                    https://www.google.com/recaptcha/admin#site/340523549?setup
+                    -->
+                 <div class="g-recaptcha" data-sitekey="6Lcd-ksUAAAAANZdvBS5yz8MwWvRQi78Zm6AzrPS"></div>
                 <input type="submit" class="btn btn-primary" value="C'est parti !" >
                 </form>
                 <br>

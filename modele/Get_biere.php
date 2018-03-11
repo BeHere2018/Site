@@ -3,7 +3,8 @@ include  "../config.php";
 include  $bdd;
 function get_biere($mail)
 {
-
+    $mail = mysql_real_escape_string($mail);
+    $mail=htmlspecialchars($mail);
 
     $query = "SELECT * FROM biere";
     $result = pg_query($query);
@@ -11,6 +12,7 @@ function get_biere($mail)
 }
 
 function get_x_biere($nb){
+    $nb=intval($nb);
     $req="SELECT MAX(id) FROM biere";
     $max=pg_fetch_row(pg_query($req))[0];
     $elem=array();

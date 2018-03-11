@@ -4,6 +4,7 @@ if(!isset($_COOKIE['id'])){
     // personne n'ayant pas de token sur sa session
     if (isset($_POST['mail']) && isset($_POST['mdp'])  ){
         // on regarde si les posts existent bien 
+        sleep(1);
         $_POST['mail']=htmlspecialchars($_POST['mail']);
         $_POST['mdp']=htmlspecialchars($_POST['mdp']);
         $mdp = hash("sha512",$_POST['mdp']);

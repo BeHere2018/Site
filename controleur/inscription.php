@@ -4,6 +4,7 @@ if(isset($_COOKIE['id'])){
     include $controleur.'connexion.php';
 }else{
     if(isset($_POST['mail']) && isset($_POST['mdp'])){
+        sleep(1);
         $_POST['mail']=htmlspecialchars($_POST['mail']);
         $_POST['mdp']=htmlspecialchars($_POST['mdp']);
         $mdp = hash("sha512",$_POST['mdp']);
