@@ -2,7 +2,7 @@
 <head>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
-<form action=<?php echo $controleur.'inscription.php'; ?> method="post">
+<form action=<?php echo $controleur.'test3.php'; ?> method="post">
     <br>
     <h3> Votre mail:</h3>
     <input type=  "text" name="mail" maxlength="40"></br>
