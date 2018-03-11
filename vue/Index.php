@@ -1,3 +1,4 @@
+<?php include '../config.php'; ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,7 +8,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<link  rel="stylesheet" type="text/css" media="screen"  href="../style/notation.css" />
+		<link  rel="stylesheet" type="text/css" media="screen"  href=<?php echo $style."notation.css"?> />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
@@ -15,7 +16,7 @@
         <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
             <a class="navbar-brand" href="#">BeHere Notation</a>
             <div class="navbar-nav" id="navbarNav">
-                <a class="nav-item nav-link" href="traitement.php">Accueil <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href=<?php echo $controleur."traitement.php" ?>>Accueil <span class="sr-only">(current)</span></a>
             </div>
         </nav>
 		<div class="container-fluid">
@@ -31,7 +32,7 @@
             <?php } ?>
             <div class="row">
                 <div class ="col-sm-12">
-                <form action='../controleur/connexion.php' method="post">
+                <form action=<?php echo $controleur.'connexion.php'?> method="post">
                 <br>
                 <h3> Votre mail:</h3>
                  <input type=  "text" name="mail"></br>
@@ -40,7 +41,7 @@
                 <input type="submit" class="btn btn-primary" value="C'est parti !" >
                 </form>
                 <br>
-                <form action='../controleur/inscription.php' method="post">
+                <form action=<?php echo $controleur.'inscription.php' ?> method="post">
                 <input type="submit" class="btn btn-primary" value="S'incrire!" >
                 </form>
                 </br>
@@ -48,7 +49,10 @@
             </div>
         </div>
         <footer class="container-fluid bg-4 text-center">
-  		    <p>Visual Effects Made By <a href="https://www.nicolas-meneux.fr">www.nicolas-meneux.fr</a></p> 
-	    </footer>   
+			<!--
+				<p>Visual Effects Made By <a href="https://www.nicolas-meneux.fr">www.nicolas-meneux.fr</a></p> 
+			-->
+			<a href=<?php echo $vue."conditions_generales.php"?>>Conditions générales</a>
+			</footer>
 	</body>
 </html>

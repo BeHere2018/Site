@@ -1,3 +1,4 @@
+<?php include '../config.php'; ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,7 +8,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<link  rel="stylesheet" type="text/css" media="screen"  href="../style/notation.css?<?php echo rand(0,10)?>" />
+		<link  rel="stylesheet" type="text/css" media="screen"  href=<?php echo $style."notation.css?".rand(0,10)?> />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
@@ -15,11 +16,11 @@
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
   <a class="navbar-brand" href="#">BeHere Notation</a>
   <div class="navbar-nav" id="navbarNav">
-	  <a class="nav-item nav-link" href="traitement.php">Accueil <span class="sr-only">(current)</span></a>
+	  <a class="nav-item nav-link" href=<?php echo $controleur."traitement.php"?>>Accueil <span class="sr-only">(current)</span></a>
   </div>
 </nav>
 
-	<?php include'../modele/Get_biere.php';?>
+	<?php include $modele.'Get_biere.php';?>
 		<div class="container fluid">
 			<div class ="row">
 				<h1>Bienvenue sur notre humble page de notation de céréales liquides !</h1>
@@ -27,7 +28,7 @@
 			<div class="row">
 				<?php 
 					if(!function_exists("get_xp")){
-					include '../modele/update_Xp.php';
+					include $modele.'update_Xp.php';
 					}
 					if(isset($_COOKIE['id'])){
 					$xp=get_xp_fromToken($_COOKIE['id']);
@@ -57,7 +58,7 @@
 					<b> <?php echo $biere[1] ?> </b>
 					</div>
 				<div class = "col-sm-8" id="notation<?php echo $biere[0]; ?>" style="display:none">
-					<form action='../controleur/Traitement.php' method="post">
+					<form action=<?php echo $controleur.'Traitement.php' ?> method="post">
 						<div class = "notation" onclick = "onClickHide2(<?php echo $biere[0];?>)">
 							<h2>Notation : </h2>
 							<div class = "radio col-sm-9">
@@ -148,7 +149,10 @@
 					}
 				</script>
 			<footer class="container-fluid bg-4 text-center">
+			<!--
 				<p>Visual Effects Made By <a href="https://www.nicolas-meneux.fr">www.nicolas-meneux.fr</a></p> 
+			-->
+			<a href=<?php echo $vue."conditions_generales.php"?>>Conditions générales</a>
 			</footer>
 		</body>
 </html>

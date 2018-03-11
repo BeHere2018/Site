@@ -1,6 +1,8 @@
 <?php
+include  "../config.php";
+
+include  $bdd;
 function put_biere($nom,$degree,$url){
-    include'connexion_postgre.php';
 	
 $query = "INSERT INTO biere(nom,degree,url) VALUES('".$nom."', '".$degree."', '".$url."')";
 $result = pg_query($query);

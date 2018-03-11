@@ -1,8 +1,9 @@
 <?php
+include '../config.php';
 if(isset($_COOKIE['id'])){
-    include 'connexion.php';
+    include $controleur.'connexion.php';
 }else{
-    include '../vue/index.php';
+    include $vue.'index.php';
 }
 
 

@@ -1,16 +1,16 @@
 <?php 
-
+include  "../config.php";
+include  $bdd;
 function get_biere($mail)
 {
 
-    include'connexion_postgre.php';
+
     $query = "SELECT * FROM biere";
     $result = pg_query($query);
     return pg_fetch_row($result);
 }
 
 function get_x_biere($nb){
-    include'connexion_postgre.php';
     $req="SELECT MAX(id) FROM biere";
     $max=pg_fetch_row(pg_query($req))[0];
     $elem=array();

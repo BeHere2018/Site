@@ -1,8 +1,10 @@
 <?php
+include  "../config.php";
+include  $bdd;
 
 function put_personne($mail,$mdp){
 
-include'connexion_postgre.php';
+
 $token="KEY:";
 for($i=0;$i<25;$i++){
     $token=$token.rand(0,9);
