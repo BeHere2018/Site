@@ -64,13 +64,13 @@
 							<div class = "radio col-sm-9">
 								<a> Votre appréciation générale de la bière : </a>
 								<br>
-								<input type="radio" name="Note" value="0" > Imbuvable
-								<input type="radio" name="Note" value="1" > Limite
-								<input type="radio" name="Note" value="2" > Passable
-								<input type="radio" name="Note" value="3" > Assez bonne
-								<input type="radio" name="Note" value="4" > Bonne
-								<input type="radio" name="Note" value="5" > Très bonne
-								<input type="radio" name="Note" value="6" > Excellente
+								<input type="radio" name="Note" value="0" > Imbuvable</br>
+								<input type="radio" name="Note" value="1" > Limite</br>
+								<input type="radio" name="Note" value="2" > Passable</br>
+								<input type="radio" name="Note" value="3" > Assez bonne</br>
+								<input type="radio" name="Note" value="4" > Bonne</br>
+								<input type="radio" name="Note" value="5" > Très bonne</br>
+								<input type="radio" name="Note" value="6" > Excellente</br>
 								<br>
 							</div>
 						</div>

@@ -5,6 +5,9 @@
 /* body {
     height : 100%;
 } */
+body {
+    border-style : solid;
+}
 .login {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2),  
                 0 1px 1px rgba(0, 0, 0, .2),
@@ -22,8 +25,15 @@
     min-width: 20em;
     background-color : rgb(215,225,245);
 }
+@media screen and (max-width : 30em) {
+    .login {
+        left : 5em;
+        right : 5em;
+    }
+}
 
-@media screen and (max-width : 22em) {
+
+@media screen and (max-width : 24em) {
     .login {
         box-shadow: 0 0 2px rgba(0, 0, 0, 0.2),  
             0 1px 1px rgba(0, 0, 0, .2),
