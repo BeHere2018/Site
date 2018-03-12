@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="../style/inscription.css"/>
 </head>
 <body>
+    <?php include 'header.php' ?>
     <form action=<?php echo $controleur.'inscription.php'; ?> class="login" method="post">
         <h1>Inscription </h1>
         <div class="pourquoi_inscrire">
@@ -15,7 +16,6 @@
                     <li><img src="../style/Images/Votes.png">Retrouver des recommandations pour l'application finale</li>
                     <li><img src="../style/Images/Recommandation.png">Accéder au plus vite à une Recommandation intelligente</li>
                 </ul>
-            </p>
         </div>
         <?php if(isset($erreur)){?>
         <p><?php echo $erreur ?></p>
@@ -35,12 +35,9 @@
             https://www.google.com/recaptcha/admin#site/340523549?setup
             -->
     
-    <footer class="container-fluid bg-4 text-center">
-    <q class="citation">Montre-moi ta bière, je te dirai qui tu es.</q>
-    <br/>
-    <a href=<?php echo $vue."conditions_generales.php"?>>Conditions générales</a>
-    </footer> 
+
+    
     </form>
 </body>
-
+<?php include 'footer.php' ?>
 

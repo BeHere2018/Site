@@ -16,7 +16,7 @@ if(!isset($_COOKIE['id'])){
             include $vue.'connexion.php';
         }else{
             // mauvais mdp ou id
-            $erreur="Mot de passe ou identifiant incorrecte";
+            $erreur="Mot de passe ou identifiant incorrect";
             include $controleur.'index.php';
         }
     }else{

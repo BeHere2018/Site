@@ -42,7 +42,7 @@ if(isset($_COOKIE['id'])){
 
                     if (!filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
                         // on regarde si c'est une adresse mail valide 
-                        $erreur="Votre adresse mail n'est pas valide, merci d'en indiquée une autre";
+                        $erreur="Votre adresse mail n'est pas valide, merci d'en indiquer une autre";
                         include $vue.'inscription.php';
                     }else{
                         if(strlen($_POST['mdp'])<8){

@@ -2,6 +2,9 @@
     border-style : solid;
 } */
 
+/* body {
+    height : 100%;
+} */
 .login {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2),  
                 0 1px 1px rgba(0, 0, 0, .2),
@@ -14,12 +17,32 @@
     width : 40%;
     left : 30%;
     right : 30%;
+    top : 3.5em;
     position : absolute;
     min-width: 20em;
     background-color : rgb(215,225,245);
 }
+
+@media screen and (max-width : 22em) {
+    .login {
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2),  
+            0 1px 1px rgba(0, 0, 0, .2),
+            0 3px 0 #fff,
+            0 4px 0 rgba(0, 0, 0, .2),
+            0 6px 0 #fff,  
+            0 7px 0 rgba(0, 0, 0, .2);
+        border-radius : 25px;
+        text-align : center;
+        left :0;
+        width : 40%;
+        top : 3.5em;
+        /* bottom : 2.5em; */
+        margin-bottom : 2.5em;
+        min-width: 20em;
+        background-color : rgb(215,225,245);
+    }
+}
 .login ul li, .informations {
-    /* border-style : dashed; */
     text-align : left;
     color: rgba(0, 0, 0, 0.5);
     margin : 0;
@@ -32,17 +55,16 @@
     height : 2em;
     width : auto;
     margin-right : 1em;
+    vertical-align : middle;
 }
-.login ul {
+.login > div > ul {
         list-style-type : none;
         margin-left : 0;
         padding-left : 0.5em;
+        margin-right : 2em;
 }
 
-.login ul li img{
-    margin-right : 1em;
-    vertical-align : middle;
-}
+
 h1 {
     color : rgb(100,100,100);
     font-size : 2em;
@@ -51,12 +73,13 @@ h1 {
 
 .informations {
     color: rgba(0, 0, 0, 0.5);
+    max-width : 30em;
+    margin-right : 4em;
+    font-size : 1.1em;
 }
 
-footer {
-    font-size : 0.5em;
-    color : rgb(245, 235, 215);
-}
+
+
 .inputs input, .actions input{
     border-radius : 25px;
     padding : 0.3em;
@@ -71,9 +94,14 @@ footer {
     border-style: unset;
 }
 
+.actions input:hover {
+    background-color : rgb(245, 215, 225) 
+}
+
 .g-recaptcha {
     margin: auto;
     display : inline-block;
     margin-top : 2em;
     position : relative;
 }
+

@@ -1,6 +1,43 @@
-html{
+/* html{
     width: 100%;
+} */
+
+/* * {
+    border-style : dotted;
+} */
+
+.login {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2),  
+                0 1px 1px rgba(0, 0, 0, .2),
+                0 3px 0 #fff,
+                0 4px 0 rgba(0, 0, 0, .2),
+                0 6px 0 #fff,  
+                0 7px 0 rgba(0, 0, 0, .2);
+    border-radius : 25px;
+    text-align : center;
+    width : 40%;
+    left : 30%;
+    right : 30%;
+    position : absolute;
+    min-width: 20em;
+    background-color : rgb(215,225,245);
 }
+.inputs input, .actions input{
+    border-radius : 25px;
+    padding : 0.3em;
+    margin-top : 0.3em;
+}
+
+.actions input {
+    background-color : rgb(225, 245, 215);
+    border-style : unset;
+    color : black;
+}
+
+.inputs, .actions {
+    border-style: unset;
+}
+
 h1{
     padding-top: 20px;
     text-align: center;
@@ -10,36 +47,19 @@ h1{
     padding-bottom: 20px;
     margin-left: 0;
     margin-right: 0;
-
+    margin-top : 3em;
 }
 
-footer { 
-    background-color: #2f2f2f;
-    color: #fff;
-}
+
 
 .bg-1 { 
     background-color: #1abc9c; /* Green */
     color: #ffffff;
 }
 
-.navbar {
-    padding-top: 10px;
-    padding-bottom: 20px;
-    border: 10;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 30px;
-    letter-spacing: 2px;
-}
-.navbar-nav  li a:hover {
-    color: #1abc9c !important;
-}
 
-  .container-fluid {
-      padding-top: 40px;
-      padding-bottom: 40px;
-  }
+
+
 img{
     height: 200px;
     width: auto;
@@ -54,13 +74,12 @@ img{
 
 }
 .biere{
-
     width:32%;
     margin:5px;
     border:0;
     float: left;
-
 }
+
 b{
     font-size: 15px;
 }
@@ -68,3 +87,4 @@ b{
     width: 100%;
     max-width: 100%;
 }
+
