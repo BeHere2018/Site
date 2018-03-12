@@ -8,7 +8,7 @@
     position : fixed;
     height : 3em;
     z-index : 1000;
-    background-color : rgb(215, 225, 245)
+    background-color : rgb(131,209,245)
 }
 .navbar-brand {
     font-size : 1.2em;
@@ -25,15 +25,15 @@
 .navbar ul li a {
     display : inline-block;
     width : 10em;
-    background-color : rgb(225, 245, 215);
     color : rgb(100, 100, 100);
-    padding-bottom : 0.25em;
+    padding-bottom : 0.4em;
     text-align : center;
+    text-decoration : none;
 }
 
 .navbar ul li a:hover {
-    padding-bottom : 0.25em;
-    background-color : rgb(245, 215, 225);
+    padding-bottom : 0.4em;
+    color : rgb(255,207,1);
 
 }
 
@@ -51,7 +51,7 @@ footer {
 }
 
 
-@media screen and (max-width : 80%) {
+@media screen and (max-width : 80em) {
     footer {
         display : none;
     }

@@ -3,27 +3,23 @@
 <html>
 	<head>
 		<title>BeHere</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<link  rel="stylesheet" type="text/css" media="screen"  href=<?php echo $style."notation.css?".rand(0,10)?> />
+		<!-- <link  rel="stylesheet" type="text/css" media="screen"  href=<?php echo $style."notation.css?".rand(0,10)?> /> -->
+		<link rel="stylesheet" type="text/css" media="screen" href="../style/inscription.css" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
 
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-  <a class="navbar-brand" href="#">BeHere Notation</a>
-  <div class="navbar-nav" id="navbarNav">
-	  <a class="nav-item nav-link" href=<?php echo $controleur."traitement.php"?>>Accueil <span class="sr-only">(current)</span></a>
-  </div>
-</nav>
+	<?php include 'header.php' ?>
 
 	<?php include $modele.'Get_biere.php';?>
 		<div class="container fluid">
 			<div class ="row">
-				<h1>Bienvenue sur notre humble page de notation de céréales liquides !</h1>
+				<h1>Bienvenue sur notre humble page de notation de Céréales Liquides !</h1>
 			</div>
 			<div class="row">
 				<?php 
@@ -38,8 +34,8 @@
 					$lvl=0;
 					}
 				?>
-				<h3>Vous êtes actuellement niveau <?php echo $lvl; ?>, et à <?php echo $xp[0]-100*$lvl; ?> % du niveau actuel</h3>
-				<h4>Pour sélectionner une bière, cliquez sur son image</h4>	
+			<div class="bloc_info">	
+				<p class="informations">Vous êtes actuellement niveau <?php echo $lvl; ?>, et à <?php echo $xp[0]-100*$lvl; ?> % du niveau actuel. </br>Pour sélectionner une bière, cliquez sur son image</p>	
 			</div>
 		</div>
 			<div class="row">
@@ -148,11 +144,6 @@
 						}
 					}
 				</script>
-			<footer class="container-fluid bg-4 text-center">
-			<!--
-				<p>Visual Effects Made By <a href="https://www.nicolas-meneux.fr">www.nicolas-meneux.fr</a></p> 
-			-->
-			<a href=<?php echo $vue."conditions_generales.php"?>>Conditions générales</a>
-			</footer>
 		</body>
+		<?php include 'footer.php' ?>
 </html>

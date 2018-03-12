@@ -23,7 +23,7 @@ body {
     top : 3.5em;
     position : absolute;
     min-width: 20em;
-    background-color : rgb(215,225,245);
+    background-color : rgb(131,209,245);
 }
 @media screen and (max-width : 30em) {
     .login {
@@ -35,21 +35,7 @@ body {
 
 @media screen and (max-width : 24em) {
     .login {
-        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2),  
-            0 1px 1px rgba(0, 0, 0, .2),
-            0 3px 0 #fff,
-            0 4px 0 rgba(0, 0, 0, .2),
-            0 6px 0 #fff,  
-            0 7px 0 rgba(0, 0, 0, .2);
-        border-radius : 25px;
-        text-align : center;
         left :0;
-        width : 40%;
-        top : 3.5em;
-        /* bottom : 2.5em; */
-        margin-bottom : 2.5em;
-        min-width: 20em;
-        background-color : rgb(215,225,245);
     }
 }
 .login ul li, .informations {
@@ -97,7 +83,7 @@ h1 {
 }
 
 .actions input {
-    background-color : rgb(225, 245, 215);
+    background-color : rgb(241,144,39);
 }
 
 .inputs, .actions {
@@ -105,7 +91,8 @@ h1 {
 }
 
 .actions input:hover {
-    background-color : rgb(245, 215, 225) 
+    background-color : rgb(255,207,1);
+    cursor : pointer; 
 }
 
 .g-recaptcha {
