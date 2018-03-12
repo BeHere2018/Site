@@ -16,17 +16,19 @@
 	<body>
         <?php include 'header.php' ?>
 		<div class="container-fluid">
-            <?php if(isset($erreur)){ ?>
-                <h2> Une erreur est survenue:</h2>
-                <h2><?php echo $erreur?></h2>
-            <?php } ?>
             <div class="row">
                 <div class ="col-sm-12">
                     <form action=<?php echo $controleur.'connexion.php'?> method="post" class="login">
                         <h1> Connexion </h1>
+                        <!--
                         <div class="pourquoi_inscrire">
                             <p class="informations">Le site est pour l'instant stocké sur votre navigateur, vos données ne sont pas conservées si vous changez de machine. Une prochaine version vous permettra de conserver vos données.</p>
                         </div>
+                        -->
+                        <?php if(isset($erreur)){ ?>
+                            <h2> Une erreur est survenue:</h2>
+                            <h2><?php echo $erreur?></h2>
+                        <?php } ?>
                         <fieldset class="inputs">
                             <input class="mail" type=  "text" name="mail" placeholder="Adresse mail" maxlength="40"></br>
                             <input class="password" type="password" name ="mdp" placeholder="Mot de Passe" maxlength="20"></br>
@@ -37,13 +39,14 @@
                             
                         <div class="g-recaptcha" data-sitekey="6Lcd-ksUAAAAANZdvBS5yz8MwWvRQi78Zm6AzrPS"></div>
                         -->
+                        </form>
                             <input type="submit" class="btn btn-primary" value="Se connecter" >
-                            <form action=<?php echo $controleur.'inscription.php' ?> method="post">
+                            <form action=<?php echo $controleur.'inscription.php' ?>>
                                 <input type="submit" class="btn btn-primary" value="S'incrire!" >
                             </form>
                         </fieldset>
-                    </form>
-            </div>
+                    
+                </div>
             </div>
         </div>
     <?php include 'footer.php' ?>
