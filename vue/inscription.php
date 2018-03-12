@@ -7,8 +7,16 @@
 <body>
     <form action=<?php echo $controleur.'inscription.php'; ?> class="login" method="post">
         <h1>Inscription </h1>
-        <p class="informations"> S'inscrire vous permet de garder vos données pour vos diverses connexions et de garder vos points d'expérience pour le lancement de l'application</p>
-        
+        <div class="pourquoi_inscrire">
+            <p class="informations"> S'inscrire pour :</p>
+                <ul>
+                    <li><img src="../style/Images/Experience.png">Gagner de l'XP</li>
+                    <li><img src="../style/Images/Sauvegarde.png">Sauvegarder ses votes</li>
+                    <li><img src="../style/Images/Votes.png">Retrouver des recommandations pour l'application finale</li>
+                    <li><img src="../style/Images/Recommandation.png">Accéder au plus vite à une Recommandation intelligente</li>
+                </ul>
+            </p>
+        </div>
         <?php if(isset($erreur)){?>
         <p><?php echo $erreur ?></p>
         <?php
