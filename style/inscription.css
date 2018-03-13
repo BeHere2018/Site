@@ -23,6 +23,7 @@
     min-width: 20em;
     background-color : rgb(131,209,245);
     padding-top : 1px;
+    padding-bottom : 5px;
 }
 @media screen and (max-width : 30em) {
     .login {
@@ -70,7 +71,7 @@ h1 {
     color: rgba(0, 0, 0, 0.5);
     max-width : 30em;
     margin-right : 4em;
-    font-size : 1.1em;
+    font-size : 1em;
 }
 
 

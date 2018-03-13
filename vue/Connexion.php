@@ -5,18 +5,11 @@
 		<title>BeHere</title>
 		<link rel="stylesheet" type="text/css" media="screen" href="../style/connexion.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="../style/inscription.css" />
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script>
+		
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
-
-	<?php include 'header.php' ?>
-
-	<?php include $modele.'Get_biere.php';?>
-		<div class="container fluid">
-			<div class="row">
-				<?php 
+	<?php 
 					if(!function_exists("get_xp")){
 					include $modele.'update_Xp.php';
 					}
@@ -27,16 +20,18 @@
 					$xp=0;
 					$lvl=0;
 					}
-				?>
-			<div class="bloc_info">	
-				<h1>Bienvenue sur notre humble page de notation de Céréales Liquides !</h1>
-				<p class="informations">Vous êtes actuellement niveau <?php echo $lvl; ?>, et à <?php echo $xp[0]-100*$lvl; ?> % du niveau actuel. </br>Pour sélectionner une bière, cliquez sur son image</p>	
+	?>
+	<?php include 'header.php' ?>
+
+	<?php include $modele.'Get_biere.php';?>
+		<div class="container fluid">
+			<div class="row">
 				
-				<script type="text/javascript">
-					$('#barre').progressbar({
-						value : 50
-					}); 
-				</script>
+			<div class="bloc_info">	
+				<h1>Bienvenue sur notre page de notation de Céréales Liquides !</h1>
+				<p class="informations">Vous êtes actuellement niveau <?php echo $lvl; ?>, et à <?php echo $xp[0]-100*$lvl; ?> % du niveau actuel.</p>
+
+
 			</div>
 		</div>
 			<div class="row">
@@ -141,7 +136,9 @@
 				x.style.display = "none";
 			}
 		}
+
 	</script>
+
 </body>
 		<?php include 'footer.php' ?>
 </html>
