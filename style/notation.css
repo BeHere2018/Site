@@ -6,64 +6,12 @@
     border-style : dotted;
 } */
 
-.login {
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2),  
-                0 1px 1px rgba(0, 0, 0, .2),
-                0 3px 0 #fff,
-                0 4px 0 rgba(0, 0, 0, .2),
-                0 6px 0 #fff,  
-                0 7px 0 rgba(0, 0, 0, .2);
-    border-radius : 25px;
-    text-align : center;
-    width : 40%;
-    left : 30%;
-    right : 30%;
-    position : absolute;
-    min-width: 20em;
-    background-color : rgb(215,225,245);
-}
-.inputs input, .actions input{
-    border-radius : 25px;
-    padding : 0.3em;
-    margin-top : 0.3em;
-}
-
-.actions input {
-    background-color : rgb(225, 245, 215);
-    border-style : unset;
-    color : black;
-}
-
-.inputs, .actions {
-    border-style: unset;
-}
-
-h1{
-    padding-top: 20px;
-    text-align: center;
-}
-
-.row{
-    padding-bottom: 20px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top : 3em;
-}
-
-
 
 .bg-1 { 
     background-color: #1abc9c; /* Green */
     color: #ffffff;
 }
 
-
-
-
-img{
-    height: 200px;
-    width: auto;
-}
 .col-sm-3{
     
     width: 100%;
@@ -80,9 +28,6 @@ img{
     float: left;
 }
 
-b{
-    font-size: 15px;
-}
 .col-sm-8{
     width: 100%;
     max-width: 100%;

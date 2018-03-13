@@ -4,11 +4,12 @@
 	<head>
 		<title>BeHere</title>
 		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+		<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 		<!-- <link  rel="stylesheet" type="text/css" media="screen"  href=<?php echo $style."notation.css?".rand(0,10)?> /> -->
+		<link rel="stylesheet" type="text/css" media="screen" href="../style/connexion.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="../style/inscription.css" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
@@ -18,9 +19,6 @@
 
 	<?php include $modele.'Get_biere.php';?>
 		<div class="container fluid">
-			<div class ="row">
-				<h1>Bienvenue sur notre humble page de notation de Céréales Liquides !</h1>
-			</div>
 			<div class="row">
 				<?php 
 					if(!function_exists("get_xp")){
@@ -35,6 +33,7 @@
 					}
 				?>
 			<div class="bloc_info">	
+				<h1>Bienvenue sur notre humble page de notation de Céréales Liquides !</h1>
 				<p class="informations">Vous êtes actuellement niveau <?php echo $lvl; ?>, et à <?php echo $xp[0]-100*$lvl; ?> % du niveau actuel. </br>Pour sélectionner une bière, cliquez sur son image</p>	
 			</div>
 		</div>
@@ -53,11 +52,11 @@
 					<img src=<?php echo $biere[2];?> ></img><br>
 					<b> <?php echo $biere[1] ?> </b>
 					</div>
-				<div class = "col-sm-8" id="notation<?php echo $biere[0]; ?>" style="display:none">
+				<div class = "notation" id="notation<?php echo $biere[0]; ?>" style="display:none">
 					<form action=<?php echo $controleur.'Traitement.php' ?> method="post">
 						<div class = "notation" onclick = "onClickHide2(<?php echo $biere[0];?>)">
 							<h2>Notation : </h2>
-							<div class = "radio col-sm-9">
+							<div class = "radio_gen">
 								<a> Votre appréciation générale de la bière : </a>
 								<br>
 								<input type="radio" name="Note" value="0" > Imbuvable</br>
@@ -72,7 +71,7 @@
 						</div>
 						<div class="precis" id="facultatif<?php echo $biere[0]; ?>" style="display:none">
 							<h2>Notation Précise :</h2>
-							<div class = "radio col-sm-9">
+							<div class = "radio_prec">
 								<a>Arôme</a>
 								<input type="radio" name="Arome" value="-1" checked> Non Noté
 								<br>
@@ -129,18 +128,18 @@
 					function onClickHide(num_biere) {
 						var id = num_biere
 						var x = document.getElementById("notation"+num_biere);
-						if (x.style.display === "block") {
+						if (x.style.display === "inline-block") {
 							x.style.display = "none";
 						} else {
-							x.style.display = "block";
+							x.style.display = "inline-block";
 						}
 					}
 					function onClickHide2(num_biere) {
 						var x = document.getElementById("facultatif"+num_biere);
 						if (x.style.display === "none") {
-							x.style.display = "block";
+							x.style.display = "inline-block";
 						} else {
-							x.style.display = "block";
+							x.style.display = "none";
 						}
 					}
 				</script>

@@ -1,0 +1,36 @@
+* {
+    /* border-style : solid; */
+    border-color : green;
+}
+
+.biere {
+    /* border-style : dotted; */
+    border-color : red;
+    display : inline-flex;
+}
+img {
+    20em;
+}
+
+.nom_biere{
+    /* border-style : dashed; */
+    border-color : black;
+    display : inline-block;
+}
+.notation {
+    z-index : 10;
+    opacity : 0.7;
+    position : absolute;
+    background-color : white;
+}
+
+
+.row {
+    border-color : blue;
+    /* border-style : dashed; */
+    height : auto;
+    display : inline-block;
+    width : 90%;
+    margin-left : auto;
+    margin-right : auto;
+}
