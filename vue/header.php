@@ -7,6 +7,9 @@
         <div class="navbar-nav" >
             <ul>
                 <li><a class="nav-item nav-link" href=<?php echo $controleur."traitement.php" ?>>Accueil <span class="sr-only">(current)</span></a></li>
+                <li><a class="nav-item nav-link" href=<?php echo $vue."connexion.php" ?>>Connexion <span class="sr-only">(current)</span></a></li>
+                <li><a class="nav-item nav-link" href=<?php echo $vue."inscription.php" ?>>Inscription <span class="sr-only">(current)</span></a></li>
+                <li><a class="nav-item nav-link" href=<?php echo $vue."index.php" ?>>Index <span class="sr-only">(current)</span></a></li>
             </ul>
         </div>
     </nav>
