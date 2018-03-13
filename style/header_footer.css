@@ -19,25 +19,24 @@
     list-style-type : none;
     margin : 0;
     padding : 0;
-    display : table;
 }
 
-.navbar ul li a {
-    display : inline-block;
-    width : 10em;
+
+a.nav-item {
+    float : left;
     color : rgb(100, 100, 100);
     padding-bottom : 0.4em;
+    width : 10em;
     text-align : center;
     text-decoration : none;
 }
 
 .navbar ul li a:hover {
-    padding-bottom : 0.4em;
     color : rgb(255,207,1);
-
 }
+
 .under_navbar {
-    /* position:absolute; */
+    /* -----------Pour décaler facilement tout l'html en dessous ----------------------- */
     top:0;
     left:0;
     width : 100;
@@ -52,7 +51,6 @@ footer {
     left : 0;
     right : 0;
     z-index : 1000;
-    height : 2.5em;
     text-align : center;
     font-size : 0.6em;
 }

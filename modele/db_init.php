@@ -1,6 +1,6 @@
 <?php
 
-$bdd = pg_connect("host=localhost dbname=biere user=postgres port=5433 password=mdpBeHere")
+$bdd = pg_connect("host=localhost dbname=biere user=postgres port=5432 password=mdpBeHere")
 or die("Can't connect to database".pg_last_error());
 
 $query = "CREATE TABLE biere (
@@ -13,7 +13,7 @@ $query = "CREATE TABLE biere (
 $result = pg_query($query);
 $query = "CREATE TABLE personne (
     id bigserial PRIMARY KEY NOT NULL,
-    mail text PRIMARY KEY,
+    mail text,
     xp bigint,
     mdp text,
     token text
