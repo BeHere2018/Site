@@ -37,7 +37,7 @@
 			<div class="row">
 				<div class="col-sm-3">
 					<?php 
-						$bieres=get_x_biere(10);
+						$bieres=get_x_biere(12);
 						$i=0;
 						foreach($bieres as $biere){
 					?>
