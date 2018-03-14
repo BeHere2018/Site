@@ -27,14 +27,15 @@ img {
 .overlay {
     position : absolute;
     top : 10%;
-    bottom : 10%;
-    left : 20%;
-    right : 20;
+    left : 10%;
+    max-height : 80%;
+    width: 10%;
     z-index : 100;
     background-color : rgba(0,0,0, 0.7);
-    transition : 0.5s 0.5s;
-    height : 80%;
-    width: 60%;
+    transition : 0.2s 0.5s;
+
+    height : 100%;
+    width : 100%;
     color : white;
 }
 
@@ -48,8 +49,8 @@ img {
 .general {
     /* display :inline-flex; */
     /* justify-content : center; */
-    width : inherit;
-    border-color : blue;
+    /* width : inherit; */
+    /* border-color : blue; */
     flex-direction : column;
     margin-bottom : 1em;
     display : inline-block;
@@ -70,13 +71,14 @@ img {
     display : block;
 }
 
-/* .annexe {
+ .annexe {
     display : inline-flex;
-    justify-content : center;
-    width : inherit;
+    justify-content : space-around;
+    /* width : inherit; */
+    align-items : flex-start;
     border-color : yellow;
     border-style : solid;
-} */
+}
 
 h2 {
     font-size : 1.5em;
@@ -92,7 +94,13 @@ h2 {
     margin-bottom : 3.5em;
 }
 
-
+.btn {
+    width : 20em;
+    height : 5em;
+    display : block;
+    /* border-style : solid;
+    border-color :blue; */
+}
 
 /* -------------- radio -------------------------- */
 .container {

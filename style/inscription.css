@@ -74,15 +74,16 @@ h1 {
     font-size : 1em;
 }
 
+/* .inputs input, .actions input dans les écrans inscription et connexion */
+/* .btn et .developpe dans l'écran de notation (pour avoir le score détaillé et envoyer le score) */
 
-
-.inputs input, .actions input{
+.inputs input, .actions input, .btn, .developpe{
     border-radius : 25px;
     padding : 0.3em;
     margin-top : 0.3em;
 }
 
-.actions input {
+.actions input, .btn, .developpe {
     background-color : rgb(241,144,39);
 }
 
@@ -90,7 +91,7 @@ h1 {
     border-style: unset;
 }
 
-.actions input:hover {
+.actions input:hover, .btn:hover , .developpe{
     background-color : rgb(255,207,1);
     cursor : pointer; 
 }
