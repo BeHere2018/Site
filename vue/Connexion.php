@@ -215,7 +215,7 @@
 				y.className = "biere";
 			} else if (y.className === "biere") {
 				// x.style.display = "inline-block";
-				overlayoff();
+				// overlayoff();
 				y.className = "overlay";
 				overlayon();
 				x.style.display = "inline-block";
@@ -232,7 +232,7 @@
 			over[0].style.display = "block";
 		}
 		function overlayoff() {
-			var over = document.getElementsByClassName("overlay")
+			var over = document.getElementsByClassName("overlay");
 			over[0].style.display = "inline-flex";
 			over[0].className = "biere";
 		}
