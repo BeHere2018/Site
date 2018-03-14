@@ -57,27 +57,27 @@
 											<span class="checkmark"></span>
 										</label>
 										<label class="container"> Limite
-											<input type="radio" name="note" value="0" >
+											<input type="radio" name="note" value="1" >
 											<span class="checkmark"></span>
 										</label>
 										<label class="container"> Passable
-											<input type="radio" name="note" value="0" >
+											<input type="radio" name="note" value="2" >
 											<span class="checkmark"></span>
 										</label>
 										<label class="container"> Assez bonne
-											<input type="radio" name="note" value="0" >
+											<input type="radio" name="note" value="3" >
 											<span class="checkmark"></span>
 										</label>
 										<label class="container"> Bonne
-											<input type="radio" name="note" value="0" >
+											<input type="radio" name="note" value="4" >
 											<span class="checkmark"></span>
 										</label>
 										<label class="container"> Très bonne
-											<input type="radio" name="note" value="0" >
+											<input type="radio" name="note" value="5" >
 											<span class="checkmark"></span>
 										</label>
 										<label class="container"> Excellente
-											<input type="radio" name="note" value="0" >
+											<input type="radio" name="note" value="6" >
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -215,6 +215,7 @@
 				y.className = "biere";
 			} else if (y.className === "biere") {
 				// x.style.display = "inline-block";
+				overlayoff();
 				y.className = "overlay";
 				overlayon();
 				x.style.display = "inline-block";
@@ -233,6 +234,7 @@
 		function overlayoff() {
 			var over = document.getElementsByClassName("overlay")
 			over[0].style.display = "inline-flex";
+			over[0].className = "biere";
 		}
 	</script>
 
