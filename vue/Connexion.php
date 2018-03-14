@@ -183,13 +183,14 @@
 										<br>
 										<input id="idbiere" name="idbiere" type="hidden" value='<?php echo $biere[0]; ?>'>
 										<br>
-									</div>
-									<div class ="col-sm-12" id="valider la note" >	
-										<button type="submit" class="btn" onclick = "onClickHide(<?php echo $biere[0];?>)">Envoyer mon avis</button>
-									</div>
+									</div>	
+								</div>
+								<div class ="col-sm-12" id="valider la note" >	
+									<button type="button" id="developpe" class="btn" onclick= "onClickHide2(<?php echo $biere[0];?>)">Je suis chaud bouillant ! </button>
+									<button type="submit" class="btn" onclick = "onClickHide(<?php echo $biere[0];?>)">Envoyer mon avis</button>
 								</div>
 							</form>
-							<button id="developpe" class="btn" onclick= "onClickHide2(<?php echo $biere[0];?>)">Je suis chaud bouillant ! </button>
+							
 						</div>
 					</div>
 					<?php
@@ -215,7 +216,7 @@
 				y.className = "biere";
 			} else if (y.className === "biere") {
 				// x.style.display = "inline-block";
-				// overlayoff();
+				overlayoff();
 				y.className = "overlay";
 				overlayon();
 				x.style.display = "inline-block";
@@ -232,9 +233,13 @@
 			over[0].style.display = "block";
 		}
 		function overlayoff() {
-			var over = document.getElementsByClassName("overlay");
-			over[0].style.display = "inline-flex";
-			over[0].className = "biere";
+			if ($(".overlay")[0]){
+				var over = document.getElementsByClassName("overlay");
+				var notation = document.getElementsByClassName("notation");
+				over[0].style.display = "inline-flex";
+				over[0].className = "biere";
+				notation[0].style.display = "none";
+			}
 		}
 	</script>
 
