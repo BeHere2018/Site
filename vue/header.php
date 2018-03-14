@@ -3,12 +3,7 @@
     <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/smoothness/jquery-ui.css" />
 </head>
     <nav class="navbar">
-        <center><a class="navbar-brand" href="#">BeHere</a></center>
-        <div id="progress_tot">
-            <div id="progress">
-                Lvl : 
-            </div>
-        </div>	
+        <center><a class="navbar-brand">BeHere</a></center>
         <div class="navbar-nav" id="Topnav">
             <ul>
                 <li><a class="nav-item" href=<?php echo $controleur."traitement.php" ?>>Accueil</a></li>
@@ -18,6 +13,13 @@
                 <li><a href="javascript:void(0);" class="icon" onclick="affichMenu()">&#9776;</a>
             </ul>
         </div>
+        <!--
+        <div id="progress_tot">
+            <div id="progress">
+                Lvl : 
+            </div>
+        </div>	
+        -->
     </nav>
     <div class="under_navbar">
     </div>
