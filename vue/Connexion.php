@@ -41,69 +41,155 @@
 						$i=0;
 						foreach($bieres as $biere){
 					?>
-					<div class="biere">
+					<div class="biere" id="biere<?php echo $biere[0]; ?>">
 						<div class="nom_biere"  onclick = "onClickHide(<?php echo $biere[0];?>)">
 							<img src=<?php echo $biere[2];?> ></img><br>
 							<b> <?php echo $biere[1] ?> </b>
 						</div>
 						<div class = "notation" id="notation<?php echo $biere[0]; ?>" style="display:none">
-							<form action=<?php echo $controleur.'Traitement.php' ?> method="post">
-								<div class = "notation" onclick = "onClickHide2(<?php echo $biere[0];?>)">
-									<h2>Notation : </h2>
+							<form class="annexe" action=<?php echo $controleur.'Traitement.php' ?> method="post" >
+								<div class = "general">
 									<div class = "radio_gen">
 										<a> Votre appréciation générale de la bière : </a>
 										<br>
-										<input type="radio" name="Note" value="0" > Imbuvable</br>
-										<input type="radio" name="Note" value="1" > Limite</br>
-										<input type="radio" name="Note" value="2" > Passable</br>
-										<input type="radio" name="Note" value="3" > Assez bonne</br>
-										<input type="radio" name="Note" value="4" > Bonne</br>
-										<input type="radio" name="Note" value="5" > Très bonne</br>
-										<input type="radio" name="Note" value="6" > Excellente</br>
-										<br>
+										<label class="container"> Imbuvable
+											<input type="radio" name="n	ote" value="0" >
+											<span class="checkmark"></span>
+										</label>
+										<label class="container"> Limite
+											<input type="radio" name="note" value="0" >
+											<span class="checkmark"></span>
+										</label>
+										<label class="container"> Passable
+											<input type="radio" name="note" value="0" >
+											<span class="checkmark"></span>
+										</label>
+										<label class="container"> Assez bonne
+											<input type="radio" name="note" value="0" >
+											<span class="checkmark"></span>
+										</label>
+										<label class="container"> Bonne
+											<input type="radio" name="note" value="0" >
+											<span class="checkmark"></span>
+										</label>
+										<label class="container"> Très bonne
+											<input type="radio" name="note" value="0" >
+											<span class="checkmark"></span>
+										</label>
+										<label class="container"> Excellente
+											<input type="radio" name="note" value="0" >
+											<span class="checkmark"></span>
+										</label>
 									</div>
 								</div>
+
 								<div class="precis" id="facultatif<?php echo $biere[0]; ?>" style="display:none">
-									<h2>Notation Précise :</h2>
 									<div class = "radio_prec">
 										<a>Arôme</a>
-										<input type="radio" name="Arome" value="-1" checked> Non Noté
+										<label class="container"> Non Noté
+											<input type="radio" name="Arome" value="-1" checked>
+											<span class="checkmark"></span>
+										</label><br>
+										<label class="container"> 0
+											<input type="radio" name="Arome" value="0" >
+											<span class="checkmark"></span>
+										</label><br>	
+										<label class="container"> 1
+											<input type="radio" name="Arome" value="1" >
+											<span class="checkmark"></span>
+										</label><br>	
+										<label class="container"> 2
+											<input type="radio" name="Arome" value="2" >
+											<span class="checkmark"></span>
+										</label><br>	
+										<label class="container"> 3
+											<input type="radio" name="Arome" value="3" >
+											<span class="checkmark"></span>
+										</label><br>	
+										<label class="container"> 4
+											<input type="radio" name="Arome" value="4" >
+											<span class="checkmark"></span>
+										</label><br>	
+										<label class="container"> 5
+											<input type="radio" name="Arome" value="5" >
+											<span class="checkmark"></span>
+										</label><br>
 										<br>
-										<input type="radio" name="Arome" value="0" > 0
-										<input type="radio" name="Arome" value="1" > 1
-										<input type="radio" name="Arome" value="2" > 2
-										<input type="radio" name="Arome" value="3" > 3
-										<input type="radio" name="Arome" value="4" > 4
-										<input type="radio" name="Arome" value="5" > 5
-										<br>
+									</div>
+									<div class = "radio_prec">
 										<a>Goût</a>
-										<input type="radio" name="Gout" value="-1" checked> Non Noté
+										<label class="container"> Non Noté
+											<input type="radio" name="Gout" value="-1" checked>
+											<span class="checkmark"></span>
+										</label><br>
 										<br>
-										<input type="radio" name="Gout" value="0" > 0
-										<input type="radio" name="Gout" value="1" > 1
-										<input type="radio" name="Gout" value="2" > 2
-										<input type="radio" name="Gout" value="3" > 3
-										<input type="radio" name="Gout" value="4" > 4
-										<input type="radio" name="Gout" value="5" > 5
+										<label class="container"> 0
+											<input type="radio" name="Gout" value="0" >
+											<span class="checkmark"></span>
+										</label><br>	
+										<label class="container"> 1
+											<input type="radio" name="Gout" value="1" >
+											<span class="checkmark"></span>
+										</label><br>	
+										<label class="container"> 2
+											<input type="radio" name="Gout" value="2" >
+											<span class="checkmark"></span>
+										</label><br>	
+										<label class="container"> 3
+											<input type="radio" name="Gout" value="3" >
+											<span class="checkmark"></span>
+										</label><br>	
+										<label class="container"> 4
+											<input type="radio" name="Gout" value="4" >
+											<span class="checkmark"></span>
+										</label><br>	
+										<label class="container"> 5
+											<input type="radio" name="Gout" value="5" >
+											<span class="checkmark"></span>
+										</label><br>
 										<br>
+									</div>
+									<div class = "radio_prec">
 										<a>Apparence</a>
-										<input type="radio" name="Apparence" value="-1" checked> Non Noté
+										<label class="container"> Non Noté
+											<input type="radio" name="Apparence" value="-1" checked>
+											<span class="checkmark"></span>
+										</label><br>
 										<br>
-										<input type="radio" name="Apparence" value="0" > 0
-										<input type="radio" name="Apparence" value="1" > 1
-										<input type="radio" name="Apparence" value="2" > 2
-										<input type="radio" name="Apparence" value="3" > 3
-										<input type="radio" name="Apparence" value="4" > 4
-										<input type="radio" name="Apparence" value="5" > 5
+										<label class="container"> 0
+											<input type="radio" name="Apparence" value="0" >
+											<span class="checkmark"></span>
+										</label><br>	
+										<label class="container"> 1
+											<input type="radio" name="Apparence" value="1" >
+											<span class="checkmark"></span>
+										</label><br>	
+										<label class="container"> 2
+											<input type="radio" name="Apparence" value="2" >
+											<span class="checkmark"></span>
+										</label><br>	
+										<label class="container"> 3
+											<input type="radio" name="Apparence" value="3" >
+											<span class="checkmark"></span>
+										</label><br>	
+										<label class="container"> 4
+											<input type="radio" name="Apparence" value="4" >
+											<span class="checkmark"></span>
+										</label><br>	
+										<label class="container"> 5
+											<input type="radio" name="Apparence" value="5" >
+											<span class="checkmark"></span>
+										</label><br>
 										<br>
 										<input id="idbiere" name="idbiere" type="hidden" value='<?php echo $biere[0]; ?>'>
 										<br>
-										<div class ="col-sm-12" id="valider la note" >	
-											<button type="submit" class="btn btn-info" onclick = "onClickHide(<?php echo $biere[0];?>)">Envoyer mon avis</button>
-										</div>	
+									</div>
+									<div class ="col-sm-12" id="valider la note" >	
+										<button type="submit" class="btn" onclick = "onClickHide(<?php echo $biere[0];?>)">Envoyer mon avis</button>
 									</div>
 								</div>
 							</form>
+							<button id="developpe" class="btn" onclick= "onClickHide2(<?php echo $biere[0];?>)">Je suis chaud bouillant ! </button>
 						</div>
 					</div>
 					<?php
@@ -122,21 +208,32 @@
 		function onClickHide(num_biere) {
 			var id = num_biere
 			var x = document.getElementById("notation"+num_biere);
-			if (x.style.display === "inline-block") {
+			var y = document.getElementById("biere"+num_biere);
+			if (y.className === "overlay") {
 				x.style.display = "none";
-			} else {
+				overlayoff();
+				y.className = "biere";
+			} else if (y.className === "biere") {
+				// x.style.display = "inline-block";
+				y.className = "overlay";
+				overlayon();
 				x.style.display = "inline-block";
 			}
 		}
 		function onClickHide2(num_biere) {
 			var x = document.getElementById("facultatif"+num_biere);
-			if (x.style.display === "none") {
-				x.style.display = "inline-block";
-			} else {
-				x.style.display = "none";
-			}
+			var btn = document.getElementById("developpe");
+			x.style.display = "inline-block";
+			btn.style.visibility = "hidden";
 		}
-
+		function overlayon(){
+			var over = document.getElementsByClassName("overlay");
+			over[0].style.display = "block";
+		}
+		function overlayoff() {
+			var over = document.getElementsByClassName("overlay")
+			over[0].style.display = "inline-flex";
+		}
 	</script>
 
 </body>

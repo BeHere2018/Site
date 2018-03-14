@@ -45,4 +45,6 @@
             progress.innerHTML = 'Lvl : '+ niv + ' | ' +widths * 1 + '%';
 		}
 		remplirjauge();
+
+
     </script>
