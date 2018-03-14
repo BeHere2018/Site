@@ -26,16 +26,12 @@
 	<?php include $modele.'Get_biere.php';?>
 		<div class="container fluid">
 			<div class="row">
-				
-			<div class="bloc_info">	
-				<h1>Bienvenue sur notre page de notation de Céréales Liquides !</h1>
-				<p class="informations">Vous êtes actuellement niveau <?php echo $lvl; ?>, et à <?php echo $xp[0]-100*$lvl; ?> % du niveau actuel.</p>
-
-
+				<div class="bloc_info">	
+					<h1>Bienvenue sur notre page de notation de Céréales Liquides !</h1>
+					<p class="informations">Vous êtes actuellement niveau <?php echo $lvl; ?>, et à <?php echo $xp[0]-100*$lvl; ?> % du niveau actuel.</p>
+				</div>
 			</div>
-		</div>
-			<div class="row">
-				<div class="col-sm-3">
+			<div class="rowbeer">
 					<?php 
 						$bieres=get_x_biere(12);
 						$i=0;
@@ -46,8 +42,9 @@
 							<img src=<?php echo $biere[2];?> ></img><br>
 							<b> <?php echo $biere[1] ?> </b>
 						</div>
-						<div class = "notation" id="notation<?php echo $biere[0]; ?>" style="display:none">
-							<form class="annexe" action=<?php echo $controleur.'Traitement.php' ?> method="post" >
+						<div class = "notation" id="notation<?php echo $biere[0]; ?>" style="visibility : hidden">
+							<form class="annexeform" action=<?php echo $controleur.'Traitement.php' ?> method="post" >
+							<div class="annexe">
 								<div class = "general">
 									<div class = "radio_gen">
 										<a> Votre appréciation générale de la bière : </a>
@@ -185,19 +182,19 @@
 										<br>
 									</div>	
 								</div>
-								<div class ="col-sm-12" id="valider la note" >	
-									<button type="button" id="developpe" class="btn" onclick= "onClickHide2(<?php echo $biere[0];?>)">Je suis chaud bouillant ! </button>
-									<button type="submit" class="btn" onclick = "onClickHide(<?php echo $biere[0];?>)">Envoyer mon avis</button>
-								</div>
+								
+							</div>
+							<div class ="btncontainer" id="valider la note" >	
+								<button type="button" id="developpe" class="btn" onclick= "onClickHide2(<?php echo $biere[0];?>)">Je suis chaud bouillant ! </button>
+								<button type="submit" class="btn" onclick = "onClickHide(<?php echo $biere[0];?>)">Envoyer mon avis</button>
+							</div>
 							</form>
-							
 						</div>
 					</div>
 					<?php
 					$i=$i+1;
 						}
-					?>
-				</div>	
+					?>	
 			</div>	
 			<script>
 				var idBiere = '<?php echo $biere[0] ?>';
@@ -215,11 +212,11 @@
 				overlayoff();
 				y.className = "biere";
 			} else if (y.className === "biere") {
-				// x.style.display = "inline-block";
 				overlayoff();
 				y.className = "overlay";
 				overlayon();
-				x.style.display = "inline-block";
+				// x.style.display = "inline-block";
+				x.style.visibility = "initial"
 			}
 		}
 		function onClickHide2(num_biere) {
@@ -230,15 +227,18 @@
 		}
 		function overlayon(){
 			var over = document.getElementsByClassName("overlay");
-			over[0].style.display = "block";
+			over[0].style.display = "inline-block";
 		}
 		function overlayoff() {
 			if ($(".overlay")[0]){
 				var over = document.getElementsByClassName("overlay");
 				var notation = document.getElementsByClassName("notation");
-				over[0].style.display = "inline-flex";
-				over[0].className = "biere";
-				notation[0].style.display = "none";
+				for (var i=0; i< over.length ; i++){
+					over[i].className = "biere";
+				}
+				for (var i=0; i< notation.length ; i++){
+					notation[i].style.visibility = "hidden";
+				}
 			}
 		}
 	</script>

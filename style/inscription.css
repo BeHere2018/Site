@@ -24,6 +24,7 @@
     background-color : rgb(131,209,245);
     padding-top : 1px;
     padding-bottom : 5px;
+    margin-bottom : 1em;
 }
 @media screen and (max-width : 30em) {
     .login {
