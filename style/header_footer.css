@@ -1,4 +1,6 @@
-
+* {
+    /* border-style : solid; */
+}
 .navbar {
     top : 0;
     left : 0;
@@ -67,19 +69,21 @@
 
 #progress_tot {
     width : 60%;
-    height : 1em;
+    height : 0.05ch;
     margin-left : auto;
     margin-right : auto;
     padding : 0;
     background-color : black;
     color : white;
     text-align : end;
+    font-size : 1px;
 }
 
 
 #progress {
     background-color : gold;
-    height : 1em;
+    height : 0.05ch;
+    font-size : 1px;
     width : 1%;
     transition : width 5s ease;
     -moz-transition : width 5s ease;
@@ -92,19 +96,17 @@
     overflow : hidden;
 }
 
-
-
-
 footer { 
     background-color: #2f2f2f;
     color: #fff;
-    bottom : 0%;
     position : fixed;
     left : 0;
     right : 0;
+    bottom : 0;
     z-index : 1000;
     text-align : center;
-    font-size : 0.6em;
+    height : 3em;
+    /* border-style : dashed; */
 }
 
 

@@ -13,13 +13,13 @@
                 <li><a href="javascript:void(0);" class="icon" onclick="affichMenu()">&#9776;</a>
             </ul>
         </div>
-<!--         
+        
         <div id="progress_tot">
             <div id="progress">
                 Lvl : 
             </div>
         </div>	
-        -->
+       
     </nav>
     <div class="under_navbar">
     </div>
