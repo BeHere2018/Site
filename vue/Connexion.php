@@ -10,16 +10,16 @@
 	</head>
 	<body>
 	<?php 
-					if(!function_exists("get_xp")){
-					include $modele.'update_Xp.php';
-					}
-					if(isset($_COOKIE['id'])){
-					$xp=get_xp_fromToken($_COOKIE['id']);
-					$lvl=floor($xp[0]/100);
-					}else{
-					$xp=0;
-					$lvl=0;
-					}
+		if(!function_exists("get_xp")){
+		include $modele.'update_Xp.php';
+		}
+		if(isset($_COOKIE['id'])){
+		$xp=get_xp_fromToken($_COOKIE['id']);
+		$lvl=floor($xp[0]/100);
+		}else{
+		$xp=0;
+		$lvl=0;
+		}
 	?>
 	<?php include 'header.php' ?>
 
@@ -55,7 +55,7 @@
 										<a> Votre appréciation générale de la bière : </a>
 										<br>
 										<label class="container"> Imbuvable
-											<input type="radio" name="n	ote" value="0" >
+											<input type="radio" name="note" value="0" >
 											<span class="checkmark"></span>
 										</label>
 										<label class="container"> Limite

@@ -28,4 +28,5 @@ function get_personne_bool($mail){
     }
 
 }
+
 ?>
