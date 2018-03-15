@@ -10,8 +10,13 @@
                 <li><a class="nav-item" href=<?php echo $controleur."connexion.php" ?>>Connexion</a></li>
                 <li><a class="nav-item" href=<?php echo $controleur."inscription.php" ?>>Inscription </a></li>
                 <li><a class="nav-item" href=<?php echo $controleur."index.php" ?>>Index</a></li>
-                <li><a class="nav-item" href=<?php echo $controleur."Sondage.php" ?>>Aidez-nous !</a></li>
+                <li><a class="nav-item" href=<?php echo $vue."Sondage.php" ?>>Aidez-nous !</a></li>
+                <?php 
+                    if (isset($_COOKIE['id'])){ ?>
                 <li><a class="nav-item" href=<?php echo $controleur."Deconnexion.php" ?>>Deconnexion</a></li>
+                <?php
+                    }
+                ?>
                 <li><a href="javascript:void(0);" class="icon" onclick="affichMenu()">&#9776;</a>
             </ul>
         </div>
