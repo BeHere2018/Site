@@ -1,0 +1,53 @@
+.questionnaire {
+    margin-bottom : 4em;
+}
+
+.bloc {
+	transition: transform .7s .2s;
+}
+
+.bloc:hover{
+	transform : rotateY(180deg);
+}
+.bloc:hover .p2bloc {
+	display : inline-block;
+}
+.bloc:hover .p1bloc {
+	display : none;
+}
+
+.imgprofil {
+    height : 20em;
+    width : 100%;
+}
+
+.p2bloc{
+	display : none;
+	height : 20em;
+	transform : rotateY(180deg);
+    background-color : rgb(131,209,245);
+}
+
+.imgprofil,
+.p1bloc,
+.p2bloc {
+    border-radius : 25px;
+    max-width : 15em;
+}
+
+
+.ensemble {
+    display : flex;
+    flex-direction : row;
+    justify-content : space-around;
+    flex-wrap : wrap;
+    margin-bottom :2em;
+}
+
+.bloc {
+    height : 20em;
+    width : 25%;
+    min-width : 10em;
+    margin-left : auto;
+    margin-right : auto;
+}

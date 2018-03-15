@@ -246,6 +246,15 @@
 				}
 			}
 		}
+		function remplirjauge() {
+			var progress = document.getElementById("progress");
+			var widths = <?php echo $xp[0]-100*$lvl; ?>;
+            var niv = <?php echo $lvl; ?>;
+			progress.style.width = '1%';
+			progress.style.width = widths/100*60 + '%';
+            progress.innerHTML = 'Lvl : '+ niv + ' | ' +widths * 1 + '%';
+		}
+		remplirjauge();
 	</script>
 
 </body>
