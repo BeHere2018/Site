@@ -39,7 +39,7 @@
                 </div>
                 <div class = "p2bloc">
                         <h3> Intensité </h3>
-                        <p> Vous recherchez des bières fortes et sans grande dignité</p>
+                        <p> Vous recherchez des bières fortes et sans grande dignité.</p>
                         <p class="citation"> "Qu'importe le flacon pourvu qu'on ait l'ivresse"</p>
                 </div>
             </div>
@@ -49,8 +49,8 @@
                 </div>
                 <div class = "p2bloc">
                         <h3> Qualité Intensité </h3>
-                        <p> Vous recherchez des bières fortes et sans grande dignité</p>
-                        <p class="citation"> "Qu'importe le flacon pourvu qu'on ait l'ivresse"</p>
+                        <p> Vous recherchez des bières fortes, mais vous avez des principes que vous souhaitez respecter.</p>
+                        <p class="citation"> "La seule arme qui m'intéresse, c'est le décapsuleur"</p>
                 </div>
             </div>
             <div class="bloc">
@@ -59,8 +59,8 @@
                 </div>
                 <div class = "p2bloc">
                         <h3> Qualité Prix </h3>
-                        <p> Vous recherchez des bières fortes et sans grande dignité</p>
-                        <p class="citation"> "Qu'importe le flacon pourvu qu'on ait l'ivresse"</p>
+                        <p> Vous recherchez des de bonne qualité, mais accessibles.</p>
+                        <p class="citation"> "La Bavaria ? Très peu pour moi"</p>
                 </div>
             </div>
             <div class="bloc">
@@ -69,8 +69,8 @@
                 </div>
                 <div class = "p2bloc">
                         <h3> Qualité </h3>
-                        <p> Vous recherchez des bières fortes et sans grande dignité</p>
-                        <p class="citation"> "Qu'importe le flacon pourvu qu'on ait l'ivresse"</p>
+                        <p> Vous recherchez la perle rare.</p>
+                        <p class="citation"> "La bière, c'est la boisson des pauvres... Alors je prendrai de la bière chère, mais bonne."</p>
                 </div>
             </div>
         </div>
@@ -99,16 +99,3 @@
 </body>
     <?php include 'footer.php' ?>
 </html>
-
-				<div class="bloc">
-				<div class = "p1bloc">
-						<img src = "images_accueil/reports.png">
-						<h3> Gérer mes commandes </h3>
-				</div>
-				<div class = "p2bloc">
-						<ul>
-							<li> <a href ="http://localhost:9510/tm1web/UrlApi.jsp#Action=Open&Type=WebSheet&Workbook=Applications/02 - std/05 - gérer mes commandes/E18 - Synthese des commandes.xlsx" target="_blank"> Synthèse des Commandes</a> </li>
-							<li> <a href ="http://localhost:9510/tm1web/UrlApi.jsp#Action=Open&Type=WebSheet&Workbook=Applications/02 - std/05 - gérer mes commandes/E19 - Carte d'identite de la commande.xlsx&AdminHost=localhost&TM1Server=Noumea" target="_blank"> Carte d'Identité de la Commande </a> </li>
-						</ul>
-				</div>
-				</div>
