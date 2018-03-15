@@ -14,11 +14,7 @@
             </ul>
         </div>
         
-        <div id="progress_tot">
-            <div id="progress">
-                Lvl : 
-            </div>
-        </div>	
+
        
     </nav>
     <div class="under_navbar">
