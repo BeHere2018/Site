@@ -25,12 +25,12 @@
 
 	<?php include $modele.'Get_biere.php';?>
 		<div class="container fluid">
-			<div class="row">
+			<!-- <div class="row">
 				<div class="bloc_info">	
 					<h1>Bienvenue sur notre page de notation de Céréales Liquides !</h1>
 					<p class="informations">Vous êtes actuellement niveau <?php echo $lvl; ?>, et à <?php echo $xp[0]-100*$lvl; ?> % du niveau actuel.</p>
 				</div>
-			</div>
+			</div> -->
 			<div id="progress_tot">
 				<div id="progress">
 					Lvl : 
@@ -250,7 +250,7 @@
 			var progress = document.getElementById("progress");
 			var widths = <?php echo $xp[0]-100*$lvl; ?>;
             var niv = <?php echo $lvl; ?>;
-			progress.style.width = '1%';
+			// progress.style.width = '1%';
 			progress.style.width = widths/100*60 + '%';
             progress.innerHTML = 'Lvl : '+ niv + ' | ' +widths * 1 + '%';
 		}
