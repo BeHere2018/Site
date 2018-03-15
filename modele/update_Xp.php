@@ -26,7 +26,6 @@ function update_Xp($id){
 
     $id = intval($id);
     $id=htmlspecialchars($id);
-
     $xp=get_xp($id)[0];
     $xp=$xp+20;
     $query = "UPDATE personne SET xp='".$xp."' WHERE id= '".$id."'";

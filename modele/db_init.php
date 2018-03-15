@@ -1,7 +1,7 @@
 <?php
 
-$bdd = pg_connect("host=localhost dbname=biere user=postgres port=5433 password=mdpBeHere")
-or die("Can't connect to database".pg_last_error());
+include '../config.php';
+include '../bdd.php';
 
 $query = "CREATE TABLE biere (
     id bigserial PRIMARY KEY NOT NULL,
