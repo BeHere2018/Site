@@ -35,6 +35,7 @@
                 x.className = "navbar-nav";
             }
         }
+        
         function remplirjauge() {
 			var progress = document.getElementById("progress");
 			var widths = <?php echo $xp[0]-100*$lvl; ?>;

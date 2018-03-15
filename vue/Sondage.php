@@ -1,11 +1,11 @@
 <?php include '../config.php'; ?>
-<!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" media="screen" href=<?php echo $style."inscription.css"?> />
     <link rel="stylesheet" type="text/css" media="screen" href=<?php echo $style."sondage.css"?> />
 </head>
 <body>
+    <?php include 'header.php' ?>
     <div class="bloc_info">
         <h1>Questions à la populace</h1>
         <p>Si vous arrivez à prendre le temps à répondre à ces questions, cela nous permettra d'adapter l'application aux besoins ! </p>
@@ -28,4 +28,5 @@
         </form>
 </div>
 </body>
+    <?php include 'footer.php' ?>
 </html>

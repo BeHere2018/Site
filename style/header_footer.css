@@ -36,7 +36,7 @@
     display : none;
 }
 
-@media screen and (max-width : 28em) {
+@media screen and (max-width : 35em) {
     .navbar-nav ul li a {display : none;}
     .navbar-nav a.icon {
         float : right;
