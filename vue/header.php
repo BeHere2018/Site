@@ -7,19 +7,16 @@
         <div class="navbar-nav" id="Topnav">
             <ul>
                 <li><a class="nav-item" href=<?php echo $controleur."traitement.php" ?>>Accueil</a></li>
-                <li><a class="nav-item" href=<?php echo $controleur."connexion.php" ?>>Connexion</a></li>
-                <li><a class="nav-item" href=<?php echo $controleur."inscription.php" ?>>Inscription </a></li>
-                <li><a class="nav-item" href=<?php echo $controleur."index.php" ?>>Index</a></li>
+                <li><a class="nav-item" href=<?php echo $vue."connexion.php" ?>>Connexion</a></li>
+                <li><a class="nav-item" href=<?php echo $vue."inscription.php" ?>>Inscription </a></li>
+                <li><a class="nav-item" href=<?php echo $vue."index.php" ?>>Index</a></li>
+                <li><a class="nav-item" href=<?php echo $vue."Sondage.php" ?>>Aidez-nous !</a></li>
                 <li><a href="javascript:void(0);" class="icon" onclick="affichMenu()">&#9776;</a>
             </ul>
         </div>
-<!--         
-        <div id="progress_tot">
-            <div id="progress">
-                Lvl : 
-            </div>
-        </div>	
-        -->
+        
+
+       
     </nav>
     <div class="under_navbar">
     </div>
@@ -38,6 +35,7 @@
                 x.className = "navbar-nav";
             }
         }
+        
         function remplirjauge() {
 			var progress = document.getElementById("progress");
 			var widths = <?php echo $xp[0]-100*$lvl; ?>;

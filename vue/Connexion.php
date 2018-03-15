@@ -31,6 +31,11 @@
 					<p class="informations">Vous êtes actuellement niveau <?php echo $lvl; ?>, et à <?php echo $xp[0]-100*$lvl; ?> % du niveau actuel.</p>
 				</div>
 			</div>
+			<div id="progress_tot">
+				<div id="progress">
+					Lvl : 
+				</div>
+			</div>	
 			<div class="rowbeer">
 					<?php 
 						$bieres=get_x_biere(12);
