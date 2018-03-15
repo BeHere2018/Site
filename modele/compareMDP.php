@@ -1,6 +1,6 @@
 <?php 
 
-include  "../config.php";
+//include  "../config.php";
 include  $bdd;
 
 function compareMDP_getToken($mail,$mdp)

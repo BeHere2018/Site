@@ -1,5 +1,5 @@
 <?php
-include  "../config.php";
+//include  "../config.php";
 
 include  $bdd;
 function put_biere($nom,$degree,$url){

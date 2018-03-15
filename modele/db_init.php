@@ -1,7 +1,7 @@
 <?php
 
-include '../config.php';
-include '../bdd.php';
+//include '../config.php';
+include $bdd;
 
 $query = "CREATE TABLE biere (
     id bigserial PRIMARY KEY NOT NULL,

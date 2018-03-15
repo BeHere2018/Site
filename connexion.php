@@ -1,5 +1,5 @@
 <?php
-include '../config.php';
+include 'config.php';
 if(!isset($_COOKIE['id'])){
     // personne n'ayant pas de token sur sa session
     if (isset($_POST['mail']) && isset($_POST['mdp'])  ){

@@ -1,5 +1,5 @@
 <?php
-include '../config.php';
+include 'config.php';
 if( isset($_COOKIE['id']) && isset($_POST['idbiere']) && isset($_POST['note']) )
 {
     include $modele.'put_rate.php';

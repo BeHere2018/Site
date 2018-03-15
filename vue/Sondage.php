@@ -1,4 +1,6 @@
-<?php include '../config.php'; ?>
+<?php 
+    //include '../config.php'; 
+?>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" media="screen" href=<?php echo $style."inscription.css"?> />

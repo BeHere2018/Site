@@ -1,8 +1,10 @@
-<?php include "../config.php"; ?>
+<?php 
+    //include "../config.php";
+ ?>
 <head>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <meta charset="utf-8" />
-<link rel="stylesheet" href="../style/inscription.css"/>
+<link rel="stylesheet" href="<?php echo $style;?>inscription.css"/>
 </head>
 <body>
     <?php include 'header.php' ?>
@@ -11,10 +13,10 @@
         <div class="pourquoi_inscrire">
             <p class="informations"> S'inscrire pour :</p>
                 <ul>
-                    <li><img src="../style/Images/Experience.png">Gagner de l'XP</li>
-                    <li><img src="../style/Images/Sauvegarde.png">Sauvegarder ses votes</li>
-                    <li><img src="../style/Images/Votes.png">Retrouver des recommandations pour l'application finale</li>
-                    <li><img src="../style/Images/Recommandation.png">Accéder au plus vite à une Recommandation intelligente</li>
+                    <li><img src="<?php echo $style;?>Images/Experience.png">Gagner de l'XP</li>
+                    <li><img src="<?php echo $style;?>Images/Sauvegarde.png">Sauvegarder ses votes</li>
+                    <li><img src="<?php echo $style;?>Images/Votes.png">Retrouver des recommandations pour l'application finale</li>
+                    <li><img src="<?php echo $style;?>Images/Recommandation.png">Accéder au plus vite à une Recommandation intelligente</li>
                 </ul>
         </div>
         <?php if(isset($erreur)){?>

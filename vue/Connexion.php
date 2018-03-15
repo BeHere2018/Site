@@ -1,10 +1,12 @@
-<?php include '../config.php'; ?>
+<?php 
+	//include '../config.php'; 
+?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>BeHere</title>
-		<link rel="stylesheet" type="text/css" media="screen" href="../style/connexion.css" />
-		<link rel="stylesheet" type="text/css" media="screen" href="../style/inscription.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $style ?>connexion.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $style ?>inscription.css" />
 		
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>

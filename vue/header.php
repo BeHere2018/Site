@@ -8,7 +8,7 @@
             <ul>
             <?php 
                     if (isset($_COOKIE['id'])){ ?>
-                    <li><a class="nav-item" href=<?php echo $vue."Sondage.php" ?>>Aidez-nous !</a></li>
+                    <li><a class="nav-item" href=<?php echo $controleur."Sondage.php" ?>>Aidez-nous !</a></li>
                     <li><a class="nav-item" href=<?php echo $controleur."Deconnexion.php" ?>>Deconnexion</a></li>
                         
                 <?php
