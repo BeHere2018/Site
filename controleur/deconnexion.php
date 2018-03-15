@@ -1,5 +1,6 @@
 <?php 
 include '../config.php';
 setcookie('id',"", time() - 100, "/");
-include $vue."index.php";
+//include $controleur."index.php";
+header("Refresh:0; url=".$controleur."index.php");
 ?>

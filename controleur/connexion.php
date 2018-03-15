@@ -13,7 +13,8 @@ if(!isset($_COOKIE['id'])){
         if($token!="false"){
             // on renvoie le token d'authentification connexion terminée
             setcookie('id',$token[0], time() + (86400 * 2000), "/");
-            include $vue.'connexion.php';
+            header("Refresh:0");
+            //include $vue.'connexion.php';
         }else{
             // mauvais mdp ou id
             $erreur="Mot de passe ou identifiant incorrect";
