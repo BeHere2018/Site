@@ -21,8 +21,6 @@
                 <?php
                     }
                 ?>
-                
-                
                 <li><a href="javascript:void(0);" class="icon" onclick="affichMenu()">&#9776;</a>
             </ul>
         </div>
