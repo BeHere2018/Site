@@ -7,17 +7,18 @@
         <div class="navbar-nav" id="Topnav">
             <ul>
             <?php 
-                    if (isset($_COOKIE['id'])){ ?>
-                    <li><a class="nav-item" href=<?php echo $controleur."Sondage.php" ?>>Aidez-nous !</a></li>
-                    <li><a class="nav-item" href=<?php echo $controleur."Deconnexion.php" ?>>Deconnexion</a></li>
+                    if (isset($_COOKIE['id'])){ ?> 
+                    <li><a class="nav-item" href=<?php echo $controleur."connexion.php" ?>>Les bières</a></li>
+                    <li><a class="nav-item" href=<?php echo $controleur."sondage.php" ?>>Aidez-nous !</a></li>
+                    <li><a class="nav-item" href=<?php echo $controleur."deconnexion.php" ?>>Deconnexion</a></li>
                         
                 <?php
                     }else{
                 ?>
-                <li><a class="nav-item" href=<?php echo $controleur."traitement.php" ?>>Accueil</a></li>
+                <li><a class="nav-item" href=<?php echo $controleur."index.php" ?>>Accueil</a></li>
                 <li><a class="nav-item" href=<?php echo $controleur."connexion.php" ?>>Connexion</a></li>
                 <li><a class="nav-item" href=<?php echo $controleur."inscription.php" ?>>Inscription </a></li>
-                <li><a class="nav-item" href=<?php echo $controleur."index.php" ?>>Index</a></li>
+
                 <?php
                     }
                 ?>

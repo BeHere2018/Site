@@ -1,5 +1,5 @@
 <?php 
-	include '../config.php'; 
+	//include '../config.php'; 
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,7 +25,7 @@
 	?>
 	<?php include 'header.php' ?>
 
-	<?php include $modele.'Get_biere.php';?>
+	<?php include $modele.'get_biere.php';?>
 		<div class="container fluid">
 			<!-- <div class="row">
 				<div class="bloc_info">	
@@ -50,7 +50,7 @@
 							<b> <?php echo $biere[1] ?> </b>
 						</div>
 						<div class = "notation" id="notation<?php echo $biere[0]; ?>" style="visibility : hidden">
-							<form class="annexeform" action=<?php echo $controleur.'Traitement.php' ?> method="post" >
+							<form class="annexeform" action=<?php echo $controleur.'traitement.php' ?> method="post" >
 							<div class="annexe">
 								<div class = "general">
 									<div class = "radio_gen">
