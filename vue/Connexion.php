@@ -1,5 +1,5 @@
 <?php 
-	//include '../config.php'; 
+	include '../config.php'; 
 ?>
 <!DOCTYPE html>
 <html>
@@ -222,8 +222,9 @@
 				overlayoff();
 				y.className = "overlay";
 				overlayon();
-				// x.style.display = "inline-block";
-				x.style.visibility = "initial"
+				x.style.visibility = "visible";
+				x.style.display = "inline-block";
+				// x.style.visibility = "initial";
 			}
 		}
 		function onClickHide2(num_biere) {
