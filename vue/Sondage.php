@@ -30,75 +30,95 @@
             </datalist>
             <input type="submit">
         </form>
-
-        <div class="questions">
-            <h2>Votre profil d'acheteur</h2>
-            <p>Quel type de bière recherchez-vous ?</p>
-            <div class="ensemble">
-                <div class="bloc">
-                    <div class="p1bloc">
-                        <img class="imgprofil" src =<?php echo $style."Images/Rick.jpg"?>>
-                    </div>
-                    <div class = "p2bloc">
-                            <h3> Intensité </h3>
-                            <p> Vous recherchez des bières fortes et sans grande dignité.</p>
-                            <p class="citation"> "Qu'importe le flacon pourvu qu'on ait l'ivresse"</p>
-                    </div>
+    </div>
+    <div class = "questions">
+        <h2>Vos goûts</h2>
+        <p>Etes-vous un grand amateur de bières aux fruits/aromatisées ? (type Desperados, Hoegaarden citron, Kriek, Corona, ...) </p>
+        <form class="questionnaire" "aromatisé">
+            <input type="radio" name="aroma" value="Oui">Oui
+            <input type="radio" name="aroma" value="Non">Non
+            <input type ="submit">
+        </form>
+        <p>Appréciez-vous plutôt les bières communes ou faites-y vous l'impasse ? (type Kronenbourg, Heineken, Stella, 1664, ...)</p>
+        <form class="questionnaire" "commune">
+            <input type="radio" name="common" value="Oui">Oui
+            <input type="radio" name="common" value="Non">Non
+            <input type ="submit">
+        </form>
+        <p>Quelle est votre couleur de bière préférée parmi les suivantes ? </p>
+        <form class="questionnaire" "couleur">
+            <input type="checkbox" name="color" value="Blanche">Blanche
+            <input type="checkbox" name="color" value="Blonde">Blonde
+            <input type="checkbox" name="color" value="Ambrée">Ambrée
+            <input type="checkbox" name="color" value="Brune">Brune
+            <input type="submit">
+        </form>
+    <div class="questions">
+        <h2>Votre profil d'acheteur</h2>
+        <p>Quel type de bière recherchez-vous ?</p>
+        <div class="ensemble">
+            <div class="bloc">
+                <div class="p1bloc">
+                    <img class="imgprofil" src =<?php echo $style."Images/Rick.jpg"?>>
                 </div>
-                <div class="bloc">
-                    <div class="p1bloc">
-                        <img class="imgprofil" src =<?php echo $style."Images/Haddock.jpg"?>>
-                    </div>
-                    <div class = "p2bloc">
-                            <h3> Qualité Intensité </h3>
-                            <p> Vous recherchez des bières fortes, mais vous avez des principes que vous souhaitez respecter.</p>
-                            <p class="citation"> "La seule arme qui m'intéresse, c'est le décapsuleur"</p>
-                    </div>
-                </div>
-                <div class="bloc">
-                    <div class="p1bloc">
-                        <img class="imgprofil" src =<?php echo $style."Images/Bender.jpg"?>>
-                    </div>
-                    <div class = "p2bloc">
-                            <h3> Qualité Prix </h3>
-                            <p> Vous recherchez des de bonne qualité, mais accessibles.</p>
-                            <p class="citation"> "La Bavaria ? Très peu pour moi"</p>
-                    </div>
-                </div>
-                <div class="bloc">
-                    <div class="p1bloc">
-                        <img class="imgprofil" src =<?php echo $style."Images/archer.jpg"?>>
-                    </div>
-                    <div class = "p2bloc">
-                            <h3> Qualité </h3>
-                            <p> Vous recherchez la perle rare.</p>
-                            <p class="citation"> "La bière, c'est la boisson des pauvres... Alors je prendrai de la bière chère, mais bonne."</p>
-                    </div>
+                <div class = "p2bloc">
+                        <h3> Intensité </h3>
+                        <p> Vous recherchez des bières fortes et sans grande dignité.</p>
+                        <p class="citation"> "Qu'importe le flacon pourvu qu'on ait l'ivresse"</p>
                 </div>
             </div>
-            <p>Choisissez votre/vos profil(s) type(s)</p>
-            <form class="questionnaire" "profil">
-                <label class="container"> L'intensité !
-                    <input type="checkbox" name="Arome" value="Intensité" >
-                    <span class="checkmarkcheck"></span>
-                </label><br>
-                <label class="container"> La Qualité Intensité
-                    <input type="checkbox" name="Arome" value="Intensité" >
-                    <span class="checkmarkcheck"></span>
-                </label><br>
-                <label class="container"> La Qualité Prix
-                    <input type="checkbox" name="Arome" value="Intensité" >
-                    <span class="checkmarkcheck"></span>
-                </label><br>
-                <label class="container"> La Qualité
-                    <input type="checkbox" name="Arome" value="Intensité" >
-                    <span class="checkmarkcheck"></span>
-                </label><br>
-                <input type="submit">
-            </form>
-        </div>  
-
-</div>
+            <div class="bloc">
+                <div class="p1bloc">
+                    <img class="imgprofil" src =<?php echo $style."Images/Haddock.jpg"?>>
+                </div>
+                <div class = "p2bloc">
+                        <h3> Qualité Intensité </h3>
+                        <p> Vous recherchez des bières fortes, mais vous avez des principes que vous souhaitez respecter.</p>
+                        <p class="citation"> "La seule arme qui m'intéresse, c'est le décapsuleur"</p>
+                </div>
+            </div>
+            <div class="bloc">
+                <div class="p1bloc">
+                    <img class="imgprofil" src =<?php echo $style."Images/Bender.jpg"?>>
+                </div>
+                <div class = "p2bloc">
+                        <h3> Qualité Prix </h3>
+                        <p> Vous recherchez des de bonne qualité, mais accessibles.</p>
+                        <p class="citation"> "La Bavaria ? Très peu pour moi"</p>
+                </div>
+            </div>
+            <div class="bloc">
+                <div class="p1bloc">
+                    <img class="imgprofil" src =<?php echo $style."Images/archer.jpg"?>>
+                </div>
+                <div class = "p2bloc">
+                        <h3> Qualité </h3>
+                        <p> Vous recherchez la perle rare.</p>
+                        <p class="citation"> "La bière, c'est la boisson des pauvres... Alors je prendrai de la bière chère, mais bonne."</p>
+                </div>
+            </div>
+        </div>
+        <p>Choisissez votre/vos profil(s) type(s)</p>
+        <form class="questionnaire" "profil">
+            <label class="container"> L'intensité !
+                <input type="checkbox" name="Arome" value="Intensité" >
+                <span class="checkmarkcheck"></span>
+            </label><br>
+            <label class="container"> La Qualité Intensité
+                <input type="checkbox" name="Arome" value="Intensité" >
+                <span class="checkmarkcheck"></span>
+            </label><br>
+            <label class="container"> La Qualité Prix
+                <input type="checkbox" name="Arome" value="Intensité" >
+                <span class="checkmarkcheck"></span>
+            </label><br>
+            <label class="container"> La Qualité
+                <input type="checkbox" name="Arome" value="Intensité" >
+                <span class="checkmarkcheck"></span>
+            </label><br>
+            <input type="submit">
+        </form>
+    </div>  
 </body>
     <?php include 'footer.php' ?>
 </html>
